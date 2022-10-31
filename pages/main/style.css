@@ -393,3 +393,117 @@ li a:active {
   align-items: center;
   justify-content: center;
 }
+
+.four {
+  display: flex;
+  align-items: stretch;
+  /* height: 1004px; */
+  background: var(--orange_gradient);
+  text-align: center;
+}
+
+.container__four {
+  width: 1160px;
+  /* height: 835px; */
+  margin: 69px 220px 100px 220px;
+  padding: 41px 0px 59px 0px;
+  background: var(--frosted_glass_white);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  color: #333B41;
+}
+
+.container__four .text {
+  padding-left: 99px;
+  text-align: left;
+}
+
+.four h2 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  color: #FE9013;
+  margin: 0px;
+  padding: 0px;
+}
+
+.four h3 {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+  color: #333B41;
+  margin-top: 70px;
+}
+
+.four h4 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: #333B41;
+}
+
+.four strong {
+  font-weight: 500;
+}
+
+.how_it_works {
+  display: flex;
+  justify-content: space-between;
+  width: 764px;
+  height: 244px;
+  margin: 0 auto;
+}
+
+.how_it_works .card_container {
+  width: 168px;
+  height: 244px;
+}
+
+.how_it_works .arrow_container {
+  background-image: url(../../assets/images/vector/how-it-works-arr.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 130px;
+  height: 168px;
+}
+
+.how_it_works .card {
+  width: 168px;
+  height: 168px;
+  background: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid var(--clementine);
+  
+}
+
+.how_it_works p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #333B41;
+  text-align: left;
+  /* margin-top: 30px; */
+}
+
+.card.pay {
+  background-image: url(../../assets/images/vector/pay.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card.zoo {
+  background-image: url(../../assets/images/vector/zoo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card.monkey {
+  background-image: url(../../assets/images/vector/monkey.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button__four {
+  margin-top: 60px;
+}
