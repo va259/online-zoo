@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --green: #4B9200;
+  --yellow: #FFEE2E;
+  --orange: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  --orange_border: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);;
+  --orange_gradient: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  --clementine: #E47209;
+  --pink_gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  --red: #D31414;
+  --black_blue: #333B41;
+  --gray: #767474;
+  --gray_smoky: #ABABAB;
+  --gray_light: #F1F3F2;
+  --frosted_glass_white: rgba(253, 253, 255, 0.52);
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 1600px;
+}
+
+nav {
+  background-color: #000;
+}
+
+nav {
+  background-color: #000;
+}
+
+nav ul {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  list-style-type: none;
+  margin: 0px 220px;
+  padding: 0px;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+
+nav li:not(:first-child):not(:last-child) a {
+  padding: 29px;
+}
+
+nav li:first-child {
+  /* order: 0; */
+  display: flex;
+  justify-content: flex-start;
+  padding: 29px 29px 29px 0px;
+}
+
+nav li:last-child{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li:last-child a {
+  padding: 29px 0px 29px 29px;
+}
+
+nav a {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  color: #fff;
+  text-decoration: none;
+  background-color: #000;
+  /* padding: 29px; */
+  /* padding: 29px 29px 29px 0px; */
+}
+
+.logo {
+  font-size: 19.01px;
+  font-weight: 300;
+  line-height: 120%;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 2.55px 4.75px;
+  margin-right: 5px;
+  background-image: url(../../assets/images/bg-images/logo-stick.png);
+  background-repeat: no-repeat;
+  background-position: bottom 9.54px left 9.69px;
+}
+
+li a:hover:not(.noHover) {
+  background-color: #333;
+}
+
+li a:active {
+  /* color: var(--orange); */
+  color: #F9804B;
+}
