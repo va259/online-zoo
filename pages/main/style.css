@@ -34,10 +34,6 @@ nav {
   background-color: #000;
 }
 
-nav {
-  background-color: #000;
-}
-
 nav ul {
   display: flex;
   height: 80px;
@@ -124,8 +120,6 @@ li a:active {
   text-transform: uppercase;
   letter-spacing: 0.013em;
   color: #fff;
-  /* margin:0px;
-  padding:0px; */
 }
 
 .one__text .one__yellow {
@@ -212,8 +206,6 @@ li a:active {
   align-content: center;
   width: 465px;
   height: 403px;
-  /* align-items: center; */
-  /* justify-content: flex-end; */
 }
 
 .two h2 {
@@ -238,4 +230,166 @@ li a:active {
   line-height: 140%;
   margin: 0px;
   padding: 0px;
+}
+
+.three {
+  position: relative;
+  background-image: url(../../assets/images/bg-images/back-2-palm.png),
+                    url(../../assets/images/bg-images/back-3-strelitzia.png);
+  background-position: left bottom, right bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.three_container {
+  display: flex;
+  align-items: center;
+  margin-top: 106px;
+  justify-content: center;
+  height: 872px;
+  gap: 20px;
+}
+                      
+.animals_container {
+  position: relative;
+  /* top: 106px; */
+  width: 1158px;
+  /* height: 872px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  /* margin: 106px auto 80px; */
+}
+
+.animal_card {
+  width: 366px;
+  height: 426px;
+  /* margin: 0px 30px 20px 0px; */
+  /* padding: 0px; */
+  border-radius: 5px;
+  border: 1px solid var(--clementine);
+  /* background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%) border-box; */
+  box-sizing: content-box;
+  background: #fff;
+  cursor: pointer;
+}
+
+.animal_card .animal_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 60px;
+  margin: 8px 16px 0px;
+  padding: 0px;
+}
+
+.animal_info__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.animal_card h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.animal_card p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.animal_photo {
+  width: 366px;
+  height: 366px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.feed_icon.weed_eater {
+  background-image: url(../../assets/images/vector/banana-bamboo_icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 33px;
+  height: 37px;
+  margin: 10px 12px;
+}
+
+.feed_icon.flesh_eater {
+  background-image: url(../../assets/images/vector/meat-fish_icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 48px;
+  height: 38px;
+  margin: 8px;
+}
+
+.card_1 {
+  background-image: url(../../assets/images/animal-cards/pandas.jpg);
+}
+
+.card_2 {
+  background-image: url(../../assets/images/animal-cards/haliaeetus.jpg);
+}
+
+.card_3 {
+  background-image: url(../../assets/images/animal-cards/gorilla.jpg);
+}
+
+.card_4 {
+  background-image: url(../../assets/images/animal-cards/sloth.jpg);
+}
+
+.card_5 {
+  background-image: url(../../assets/images/animal-cards/ry.jpg);
+}
+
+.card_6 {
+  background-image: url(../../assets/images/animal-cards/penguin.jpg);
+}
+
+.circle_arrow {
+  background-image: var(--orange), url(../../assets/images/vector/arrow-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle_arrow:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+
+.circle_arrow:active {
+  background-color: var(--green);
+  background-image: url(../../assets/images/vector/arrow-left.svg);
+  background-blend-mode: color;
+  filter: brightness(100%);
+}
+
+.arrow__right {
+  transform: rotate(-180deg);
+}
+
+.three_container__bottom {
+  height: 234px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
