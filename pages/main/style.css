@@ -20,10 +20,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-h2 h3 h4 h5 p {
+/* h2 h3 h4 h5 p {
   margin: 0px;
   padding: 0px;
-}
+} */
 
 .container {
   position: relative;
@@ -169,4 +169,73 @@ li a:active {
   position: absolute;
   left: calc(50% - 298px/2 + 332px);
   top: 626px;
+}
+
+.two {
+  background-image: url(../../assets/images/bg-images/back-1-flower.png);
+  background-repeat: no-repeat;
+  background-position: top 12px right 0px;
+  height: 617px;
+}
+
+.container__two {
+  width: 1161px;
+  height: 403px;
+  position: relative;
+  left: 219px;
+  top: 140px;
+  display: flex;
+  justify-content: center;
+  color: #333B41;
+
+}
+
+.img__two {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 609px;
+  height: 403px;
+  left: 0px;
+  top: 0px;
+  backdrop-filter: blur(2px);
+}
+
+.separator__two {
+  width: 87px;
+}
+
+.content__two {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-content: center;
+  width: 465px;
+  height: 403px;
+  /* align-items: center; */
+  /* justify-content: flex-end; */
+}
+
+.two h2 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.two h3 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.two p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  margin: 0px;
+  padding: 0px;
 }
