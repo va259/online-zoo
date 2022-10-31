@@ -7,7 +7,7 @@
   --orange_border: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);;
   --orange_gradient: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
   --clementine: #E47209;
-  --pink_gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+  --pink_gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
   --red: #D31414;
   --black_blue: #333B41;
   --gray: #767474;
@@ -146,6 +146,10 @@ li a:active {
   color: #fff;
 }
 
+.square {
+  border-radius: 0px;
+}
+
 .button:hover {
   background: var(--clementine);
   cursor: pointer;
@@ -265,11 +269,8 @@ li a:active {
 .animal_card {
   width: 366px;
   height: 426px;
-  /* margin: 0px 30px 20px 0px; */
-  /* padding: 0px; */
   border-radius: 5px;
   border: 1px solid var(--clementine);
-  /* background: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%) border-box; */
   box-sizing: content-box;
   background: #fff;
   cursor: pointer;
@@ -506,4 +507,144 @@ li a:active {
 
 .button__four {
   margin-top: 60px;
+}
+
+.five {
+  display: flex;
+  justify-content: center;
+  /* align-items: stretch; */
+  height: 919px;
+  background: #fff;
+  background-image: url(../../assets/images/bg-images/back-4-leaf.png);
+  background-position: right bottom -130px;
+  background-repeat: no-repeat;
+}
+
+.testimonials {
+  height: 575px;
+  width: 1160px;
+  display: block;
+}
+
+.testimonials h4 {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+  text-align: center;
+  color: #333B41;
+  margin-top: 140px;
+}
+
+.testimonials_container {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  height: 391px;
+}
+
+.testimonials_container .card {
+  width: 268px;
+  height: 391px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(var(--gray_light), var(--gray_light)), var(--pink_gradient);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.card_inner {
+  margin: 0px 15px 19px 16px;
+}
+
+.card .user {
+  display: flex;
+  height: 38px;
+  margin-top: 15px;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user .name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000;
+}
+
+.user .local {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #BDBDBD;  
+}
+
+.card .user_icon {
+  background-repeat: no-repeat;
+  background-position: left top;
+  width: 37px;
+  height: 37px;
+  margin-right: 10px;
+}
+
+.card .user_icon.default_user {
+  background-image: url(../../assets/images/incons/user_icon_default.png);
+}
+
+.card .user_icon.user_one {
+  background-image: url(../../assets/images/incons/user_icon_1.png);
+}
+
+.card .user_icon.user_two {
+  background-image: url(../../assets/images/incons/user_icon_2.png);
+}
+
+.card .user_icon.user_three {
+  background-image: url(../../assets/images/incons/user_icon_3.png);
+}
+
+.card p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #767474;
+}
+
+.scroll {
+  /* position: relative; */
+  /* display: flex; */
+  /* align-content: center; */
+  box-sizing: content-box;
+  height: 8px;
+  width: 599px;
+  margin: 21px auto 31px auto;
+  border-radius: 5px;
+  background-image: linear-gradient(var(--gray_light), var(--gray_light)), var(--pink_gradient);
+  border: 1px solid transparent;
+  background-clip: content-box, border-box;
+}
+
+.scroll > span {
+  display: block;
+  position: relative;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #FE9013;
+  margin: 1px;
+  overflow: hidden;
+}
+
+.scroll > span:hover {
+  background-color: #E47209;
+  cursor: pointer;
+}
+
+.scroll > span:active {
+  background-color: #4B9200
+}
+
+.testimonials .button {
+  margin: 0px auto 180px;
 }
