@@ -20,6 +20,11 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+h2 h3 h4 h5 p {
+  margin: 0px;
+  padding: 0px;
+}
+
 .container {
   position: relative;
   width: 1600px;
@@ -44,13 +49,11 @@ nav ul {
   flex-wrap: nowrap;
 }
 
-
 nav li:not(:first-child):not(:last-child) a {
   padding: 29px;
 }
 
 nav li:first-child {
-  /* order: 0; */
   display: flex;
   justify-content: flex-start;
   padding: 29px 29px 29px 0px;
@@ -74,8 +77,6 @@ nav a {
   color: #fff;
   text-decoration: none;
   background-color: #000;
-  /* padding: 29px; */
-  /* padding: 29px 29px 29px 0px; */
 }
 
 .logo {
@@ -100,4 +101,72 @@ li a:hover:not(.noHover) {
 li a:active {
   /* color: var(--orange); */
   color: #F9804B;
+}
+
+.one__image {
+  height: 700px;
+  width: 100%;
+  background-image: url(../../assets/images/bg-images/giant-panda.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom 0px left 0px;
+}
+
+.one__text {
+  position: absolute;
+  width: 500.31px;
+  height: 400px;
+  left: 880px;
+  top: 80px;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 114%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.013em;
+  color: #fff;
+  /* margin:0px;
+  padding:0px; */
+}
+
+.one__text .one__yellow {
+  color: var(--yellow);
+}
+
+.one__ellipse {
+  position: absolute;
+  top: 92px;
+  left: calc(50% - 465px/2 + 239.5px);
+  width: 465px;
+  height: 465px;
+  background: var(--orange);
+  border-radius: 50%;
+}
+
+.button {
+  width: 298px;
+  height: 54px;
+  background: var(--orange);
+  border-radius: 25px;
+  border: 0px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.button:hover {
+  background: var(--clementine);
+  cursor: pointer;
+}
+
+.button:active {
+  background: var(--green);
+}
+
+.button:disabled {
+  background: var(--gray);
+}
+
+.button__one {
+  position: absolute;
+  left: calc(50% - 298px/2 + 332px);
+  top: 626px;
 }
