@@ -288,17 +288,47 @@ form:invalid button{
 }
 
 .animal_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
   width: 366px;
   height: 426px;
   border-radius: 5px;
   border: 1px solid var(--clementine);
   box-sizing: content-box;
-  background: #fff;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: center;
 }
 
 .animal_card:hover {
-  filter: brightness(90%);
+  animation: scaleUp 2s;
+}
+
+.animal_card:hover .animal_info__container {
+  background: var(--frosted_glass_white);
+  height: 130px;
+}
+
+.animal_card:hover h4 {
+  font-size: 1.8rem;
+}
+
+.animal_card:hover p {
+  font-size: 1.3rem;
+}
+
+@keyframes fadeIn {
+  from {filter: brightness(100%)} to {filter: brightness(70%)};
+}
+
+@keyframes scaleUp {
+  from {background-size: 120%} to {background-size: 130%};
+}
+
+@keyframes scaleUp {
+  from {background-size: 120%} to {background-size: 130%};
 }
 
 .animal_card .animal_info {
@@ -314,6 +344,10 @@ form:invalid button{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 60px;
+  background-color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .animal_card h4 {
@@ -331,15 +365,6 @@ form:invalid button{
   line-height: 120%;
   margin: 0px;
   padding: 0px;
-}
-
-.animal_photo {
-  width: 366px;
-  height: 366px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
 }
 
 .feed_icon.weed_eater {
@@ -397,6 +422,10 @@ form:invalid button{
   align-items: center;
 }
 
+.arrow__right {
+  transform: rotate(-180deg);
+}
+
 .circle_arrow:hover {
   cursor: pointer;
   filter: brightness(80%);
@@ -407,10 +436,6 @@ form:invalid button{
   background-image: url(../../assets/images/vector/arrow-left.svg);
   background-blend-mode: color;
   filter: brightness(100%);
-}
-
-.arrow__right {
-  transform: rotate(-180deg);
 }
 
 .three_container__bottom {
@@ -545,7 +570,6 @@ form:invalid button{
 .five {
   display: flex;
   justify-content: center;
-  /* align-items: stretch; */
   height: 919px;
   background: #fff;
   background-image: url(../../assets/images/bg-images/back-4-leaf.png);
@@ -646,9 +670,6 @@ form:invalid button{
 }
 
 .scroll {
-  /* position: relative; */
-  /* display: flex; */
-  /* align-content: center; */
   box-sizing: content-box;
   height: 8px;
   width: 599px;
@@ -710,18 +731,26 @@ footer .button {
   margin-top: 20px;
 }
 
-.social {
-  /* margin-top: 50px; */
+.left a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.logo__footer {
+footer .logo {
   width: 82px;
   height: 52px;
-  background-image: url(../../assets/images/logo-footer-2x.png);
+  font-size: 19.01px;
+  font-weight: 300;
+  line-height: 120%;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 2.55px 4.75px;
+  margin-right: 5px;
+  background-image: url(../../assets/images/bg-images/logo-stick.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0px;
-  padding: 0px;
+  background-position: bottom 9.54px left 9.69px;
 }
 
 .social a {
