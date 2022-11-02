@@ -4,7 +4,7 @@
   --green: #4B9200;
   --yellow: #FFEE2E;
   --orange: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-  --orange_border: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);;
+  --orange_border: linear-gradient(113.96deg, #FA6F32 1.49%, #FE9013 101.44%);
   --orange_gradient: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
   --clementine: #E47209;
   --pink_gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
@@ -175,11 +175,15 @@ header a.active {
 }
 
 .button_form:hover {
-  width: 129px;
-  height: 42px;
-  background: #F1F3F2;
-  border: 1px solid #333B41;
+  border: 1px solid var(--clementine);
+  color: var(--clementine);
   border-radius: 5px;
+  cursor: pointer;
+}
+
+form:invalid button{
+  border: 1px solid #D31414;
+  color: #D31414;
   cursor: pointer;
 }
 
@@ -688,7 +692,7 @@ footer {
 
 footer .container {
   width: 1160px;
-  height: 352px;
+  height: 370px;
   padding: 40px 0px 50px 0px;
   display: flex;
   margin: 0px auto;
@@ -699,7 +703,7 @@ footer .left {
   flex-direction: column;
   justify-content: space-between;
   height: 352px;
-  width: 400px;
+  width: 360px;
 }
 
 footer .button {
@@ -729,13 +733,9 @@ footer .button {
   text-decoration: none;
 }
 
-.social a:hover {
-  color: #E47209;
-}
-
 .social_container {
   display: flex;
-  
+  width: 120px;
 }
 
 .social_icon {
@@ -747,19 +747,28 @@ footer .button {
   padding: 0px;
 }
 
-.social_icon.facebook{
+.social div:hover {
+  cursor: pointer;
+  background-blend-mode: color;
+}
+
+.social_container a:hover {
+  color: #E47209;
+}
+
+.social_icon.facebook {
   background-image: url(../../assets/images/incons/fb.svg);
 }
 
-.social_icon.twitter{
+.social_icon.twitter {
   background-image: url(../../assets/images/incons/tw.svg);
 }
 
-.social_icon.instagram{
+.social_icon.instagram {
   background-image: url(../../assets/images/incons/in.svg);
 }
 
-.social_icon.youtube{
+.social_icon.youtube {
   background-image: url(../../assets/images/incons/yt.svg);
 }
 
@@ -767,7 +776,7 @@ footer .center {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 362px;
+  width: 400px;
 }
 
 footer nav ul {
