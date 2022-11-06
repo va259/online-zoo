@@ -240,7 +240,7 @@ form:invalid button{
   font-weight: 400;
   font-size: 48px;
   line-height: 120%;
-  margin: 0px;
+  margin: 0px 0px -15px 0px;
   padding: 0px;
 }
 
@@ -249,7 +249,7 @@ form:invalid button{
   font-size: 24px;
   line-height: 120%;
   margin: 0px;
-  padding: 0px;
+  padding: 15px 0px 0px 0px;
 }
 
 .two p {
@@ -443,6 +443,10 @@ form:invalid button{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.button__three {
+  margin-bottom: 15px;
 }
 
 .four {
