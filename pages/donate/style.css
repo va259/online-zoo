@@ -266,6 +266,14 @@ form:invalid button{
   justify-content: center;
 }
 
+.x_icon {
+  width: 14px;
+  height: 14px;
+  margin: auto auto auto 0;
+  background-image: url(../../assets/images/incons/x_icon.svg);
+  background-repeat: no-repeat;
+}
+
 .animals_widget p:first-of-type {
   font-weight: 500;
   font-size: 72px;
@@ -284,13 +292,6 @@ form:invalid button{
 
 .donation_amount p:last-child {
   text-align: center;
-}
-
-.x_icon {
-  width: 14px;
-  height: 14px;
-  background-image: url(../../assets/images/incons/x_icon.svg);
-  background-repeat: no-repeat;
 }
 
 .widget_icon {
@@ -314,6 +315,16 @@ form:invalid button{
   background-color: #404950;
   border-radius: 2px;
   gap: 40px;
+  z-index: -1;
+}
+
+.amount_picker::after {
+  content: '';
+  position: absolute;
+  width: calc(100% - 285px);
+  height: 2px;
+  background: #72828E;
+  z-index: 0;
 }
 
 .radio_wrap {
@@ -358,14 +369,6 @@ form:invalid button{
   z-index: 0;
 } */
 
-/* .strikethrough-w-bg::after {
-  content: '';
-  position: absolute;
-  width: calc(100% - 26px - 30px);
-  height: 2px;
-  background: #72828E;
-  z-index: -1;
-} */
 
 /* .labels {
   width: 950px;
