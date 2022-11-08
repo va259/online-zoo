@@ -314,96 +314,58 @@ form:invalid button{
   align-items: center;
   background-color: #404950;
   border-radius: 2px;
-  gap: 40px;
+  /* display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr)); */
+  /* gap: 40px; */
   z-index: -1;
 }
 
 .amount_picker::after {
   content: '';
   position: absolute;
-  width: calc(100% - 285px);
+  width: calc(976px - 56px);
   height: 2px;
   background: #72828E;
   z-index: 0;
 }
 
 .radio_wrap {
-  flex: 0 0 12px;
-  /* text-align: right; */
-  display: flex;
-  margin: 0 auto;
-  /* align-content: flex-start */
-  /* align-content:flex-end; */
-  /* padding: 0; */
-  flex-direction: row;
-  align-items:center;
   height: 27px;
-  /* padding: 0px 30px; */
+  width: 10px;
+  padding: 8px 0;
+  z-index: 1;
 }
 
 .amount_picker .radio_wrap:first-child  {
-  /* justify-content: flex-start; */
-  margin: 0 auto 0 0;
-  justify-content: flex-start;
-  /* padding: 0 30px 0 0; */
+  justify-self: start;
 }
 
 .amount_picker .radio_wrap:last-child {
-  /* justify-content: flex-end; */
-  margin: 0 0 0 auto;
-  justify-content: flex-end;
-  /* padding: 0 0 0 30px; */
+  justify-self: end;
 }
 
-/* .strikethrough-w-bg {
-  position: relative;
-  width: 976px;
-  height: 27px;
-  padding: 0px 26px 0px 30px;
-  background: #404950;
-  border-radius: 2px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 0;
-} */
-
-
-/* .labels {
-  width: 950px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 10px;
-} */
-
 .amount_picker label {
+  display: inline-block;
   font-weight: 500;
   font-size: 26px;
   line-height: 140%;
-  text-transform: uppercase;
   color: #333B41;
   position: relative;
   left: -30px;
-  top: 40px;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around; */
+  top: 15px;
+  /* padding: 10px; */
   /* margin-top: 40px; */
-}
-
-.radio_label_group > label {
-  /* margin-top: 50px; */
 }
 
 .amount_picker input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
   background-color: #FFEE2E;
-  padding: 0px;
+  /* padding: 0px; */
   font: inherit;
   color: #72828E;
+  display: inline-block;
+  vertical-align: top;
   width: 10px;
   height: 10px;
   border: none;
@@ -413,31 +375,29 @@ form:invalid button{
 
 .amount_picker input[type="radio"]::before {
   content: "";
+  display: inline-block;
   width: 0.65em;
   height: 0.65em;
   border-radius: 50%;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  /* box-shadow: inset 1em 1em var(--form-control-color); */
 }
 
 .amount_picker input[type="radio"]:checked::before {
   /* transform: scale(1); */
 }
 
-.amount_picker input[type="radio"]:focus {
+.amount_picker input[type="radio"]:checked {
   /* padding: 6px; */
   /* border: 1.5px solid #FE9013; */
-  outline: 1.5px double #FE9013;
-  outline-offset: 5px;
-  /* box-shadow: 0 0 0 3px transparent, 0 0 0 5px #FE9013, 0 0 0 7px transparent, 0 0 0 10px #FE9013; */
+  outline: 16px double #FE9013;
+  outline-offset: 3px;
+  /* box-shadow: 0 0 0 6px rgba(0, 0, 0, 0), 0 0 0 9px #FE9013, 0 0 0 13px rgba(0, 0, 0, 0), 0 0 0 17px #FE9013; */
 }
 
-/* input[type="radio"]:focus .radio_wrap {
-  outline: 1.5px solid #FE9013;
-  outline-offset: 10px;
-  z-index: 10;
-} */
+.amount_picker input[type="radio"]:checked + label {
+  color: #FE9013;
+}
 
 /* Firefox */
 .form_rest input[type=number] {
@@ -471,6 +431,18 @@ input::-webkit-inner-spin-button {
   outline-color: #4B9200;
 }
 
+.form_rest .wrap {
+  display: inline-block;
+  /* width: 218px; */
+  margin: 0 30px 0 30px;
+}
+
+.form_rest label {
+  position: relative;
+  left: 5px;
+  top: -2px;
+}
+
 .form_rest input[type=radio] {
   -webkit-appearance: none;
   appearance: none;
@@ -484,10 +456,10 @@ input::-webkit-inner-spin-button {
   color: #fff;
 }
 
-.form_rest input[type=radio]:focus {
+.form_rest input[type=radio]:checked   {
   -webkit-appearance: none;
   appearance: none;
-  background-color: transparent;
+  background-color: #4B9200;
   padding: 0px;
   font: inherit;
   width: 15px;
