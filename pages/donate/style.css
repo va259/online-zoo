@@ -16,6 +16,10 @@
   --frosted_glass_white: rgba(253, 253, 255, 0.52);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Roboto, sans-serif;
 }
@@ -173,7 +177,7 @@ form:invalid button{
 
 .pick_and_feed .container {
   width: 1160px;
-  margin: 40px 220px 100px 220px;
+  margin: 40px 220px 160px 220px;
   color: #fff;
 }
 
@@ -226,12 +230,13 @@ form:invalid button{
   /* font-weight: 400;
   font-size: 24px;
   line-height: 120%; */
-  margin: 0px;
-  padding: 0px;
-  /* text-align: left; */
+  /* margin: 0px; */
+  /* padding: 0px; */
+  text-align: left;
+  color: #333B41;
 }
 
-.container_bg .text {
+.container_bg h6 {
   font-weight: 400;
   font-size: 24px;
   line-height: 120%;
@@ -240,44 +245,281 @@ form:invalid button{
   padding: 0px;
 }
 
-.container_bg .donation_value {
-  width: 532px;
-  height: 246px;
+.container_bg p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #333B41;
 }
 
+.animals_widget {
+  display: flex;
+  justify-content: space-between;
+  width: 532px;
+  height: 246px;
+  margin: 60px auto 48px auto;
+}
+
+.diet_for_the_day {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.x_icon {
+  width: 14px;
+  height: 14px;
+  margin: auto auto auto 0;
+  background-image: url(../../assets/images/incons/x_icon.svg);
+  background-repeat: no-repeat;
+}
+
+.animals_widget p:first-of-type {
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 80%;
+  text-align: center;
+  margin-bottom: 11px;
+}
+
+.animals_widget p:nth-of-type(2) {
+  font-weight: 400;
+  font-size: 16px;
+  /* line-height: 140%; */
+  /* text-align: center; */
+  /* margin-top: 11px; */
+}
+
+.donation_amount p:last-child {
+  text-align: center;
+}
+
+.widget_icon {
+  width: 284px;
+  height: 246px;
+  background-image: url(../../assets/images/donate-animals-widget/animals-widget-panda.svg);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: left bottom;
+}
+
+.amount_picker {
+  width: 976px;
+  height: 27px;
+  padding: 0px 26px 0px 30px;
+  margin: 15px 0px 60px 0px;
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-between;
+  align-items: center;
+  background-color: #404950;
+  border-radius: 2px;
+  gap: 40px;
+  z-index: -1;
+}
+
+.amount_picker::after {
+  content: '';
+  position: absolute;
+  width: calc(100% - 285px);
+  height: 2px;
+  background: #72828E;
+  z-index: 0;
+}
+
+.radio_wrap {
+  flex: 0 0 12px;
+  /* text-align: right; */
+  display: flex;
+  margin: 0 auto;
+  /* align-content: flex-start */
+  /* align-content:flex-end; */
+  /* padding: 0; */
+  flex-direction: row;
+  align-items:center;
+  height: 27px;
+  /* padding: 0px 30px; */
+}
+
+.amount_picker .radio_wrap:first-child  {
+  /* justify-content: flex-start; */
+  margin: 0 auto 0 0;
+  justify-content: flex-start;
+  /* padding: 0 30px 0 0; */
+}
+
+.amount_picker .radio_wrap:last-child {
+  /* justify-content: flex-end; */
+  margin: 0 0 0 auto;
+  justify-content: flex-end;
+  /* padding: 0 0 0 30px; */
+}
+
+/* .strikethrough-w-bg {
+  position: relative;
+  width: 976px;
+  height: 27px;
+  padding: 0px 26px 0px 30px;
+  background: #404950;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 0;
+} */
+
+
+/* .labels {
+  width: 950px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+} */
+
+.amount_picker label {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #333B41;
+  position: relative;
+  left: -30px;
+  top: 40px;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
+  /* margin-top: 40px; */
+}
+
+.radio_label_group > label {
+  /* margin-top: 50px; */
+}
+
+.amount_picker input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #FFEE2E;
+  padding: 0px;
+  font: inherit;
+  color: #72828E;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.amount_picker input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  /* box-shadow: inset 1em 1em var(--form-control-color); */
+}
+
+.amount_picker input[type="radio"]:checked::before {
+  /* transform: scale(1); */
+}
+
+.amount_picker input[type="radio"]:focus {
+  /* padding: 6px; */
+  /* border: 1.5px solid #FE9013; */
+  outline: 1.5px double #FE9013;
+  outline-offset: 5px;
+  /* box-shadow: 0 0 0 3px transparent, 0 0 0 5px #FE9013, 0 0 0 7px transparent, 0 0 0 10px #FE9013; */
+}
+
+/* input[type="radio"]:focus .radio_wrap {
+  outline: 1.5px solid #FE9013;
+  outline-offset: 10px;
+  z-index: 10;
+} */
+
 /* Firefox */
-input[type=number] {
+.form_rest input[type=number] {
   -moz-appearance: textfield;
+  width: 268px;
+  height: 54px;
+  margin: 40px 0 25px 0;
+  padding: 0px 0px 0px 9px;
+  color: #929699;
+  background-color: transparent;
+  border: 1px solid #929699;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  background-image: url(../../assets/images/incons/dollar_sign.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px top 17px;
 }
 
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
+.form_rest input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+.form_rest input:focus {
+  color: #4B9200 !important;
+  outline-color: #4B9200;
+}
+
+.form_rest input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  padding: 0px;
+  font: inherit;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #FE9013;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.form_rest input[type=radio]:focus {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  padding: 0px;
+  font: inherit;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #4B9200;
+  border-radius: 50%;
+  color: #333B41;
+}
+
+.pick_and_feed .button  {
+  margin: 33px 0 20px 0;
+}
+
 footer {
   background: #111115;
   width: 1600px;
-  height: 443px;
   color: #fff;
-  margin: 0px auto;
 }
 
 footer .container {
   width: 1160px;
-  height: 370px;
+  height: 443px;
   padding: 40px 0px 30px 0px;
+  margin: 0 auto;
   display: flex;
-  margin: 0px auto;
+  
 }
 
 footer .left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 352px;
   width: 360px;
 }
 
