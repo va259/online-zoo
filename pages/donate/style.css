@@ -330,9 +330,11 @@ form:invalid button{
 }
 
 .radio_wrap {
+  display: flex;
+  align-items: center;
   height: 27px;
   width: 10px;
-  padding: 8px 0;
+  /* padding: 8px 0; */
   z-index: 1;
 }
 
@@ -352,7 +354,7 @@ form:invalid button{
   color: #333B41;
   position: relative;
   left: -30px;
-  top: 15px;
+  top: 45px;
   /* padding: 10px; */
   /* margin-top: 40px; */
 }
