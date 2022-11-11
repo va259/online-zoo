@@ -169,7 +169,6 @@ form:invalid button{
 }
 
 .pick_and_feed {
-  /* height: 1482px; */
   display: flex;
   align-items: stretch;
   background: var(--orange_gradient);
@@ -200,7 +199,6 @@ form:invalid button{
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
-  /* padding: 0px; */
   margin: 10px 10px 0px 0px;
 }
 
@@ -227,11 +225,6 @@ form:invalid button{
 }
 
 .pick_and_feed .container_bg p {
-  /* font-weight: 400;
-  font-size: 24px;
-  line-height: 120%; */
-  /* margin: 0px; */
-  /* padding: 0px; */
   text-align: left;
   color: #333B41;
 }
@@ -285,9 +278,6 @@ form:invalid button{
 .animals_widget p:nth-of-type(2) {
   font-weight: 400;
   font-size: 16px;
-  /* line-height: 140%; */
-  /* text-align: center; */
-  /* margin-top: 11px; */
 }
 
 .donation_amount p:last-child {
@@ -299,7 +289,6 @@ form:invalid button{
   height: 246px;
   background-image: url(../../assets/images/donate-animals-widget/animals-widget-panda.svg);
   background-repeat: no-repeat;
-  /* background-size: cover; */
   background-position: left bottom;
 }
 
@@ -314,9 +303,6 @@ form:invalid button{
   align-items: center;
   background-color: #404950;
   border-radius: 2px;
-  /* display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr)); */
-  /* gap: 40px; */
   z-index: -1;
 }
 
@@ -354,8 +340,6 @@ form:invalid button{
   position: relative;
   left: -40px;
   top: 45px;
-  /* padding: 10px; */
-  /* margin-top: 40px; */
 }
 
 .amount_picker input[type="radio"] {
@@ -383,6 +367,21 @@ form:invalid button{
 .amount_picker input[type="radio"]:checked:before {
   outline: 1.7px solid #FE9013;
   outline-offset: 13px;
+}
+
+.amount_picker input[type="radio"]:after {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  top: -43px;
+  left: -25px;
+  width: 10px;
+  height: 10px;
+  padding: 25px;
+  border-radius: 50%;
+  /* background-color: #e83474; */
+  /* z-index: -5; */
 }
 
 .amount_picker input[type="radio"]:checked {
@@ -428,7 +427,6 @@ input::-webkit-inner-spin-button {
 
 .form_rest .wrap {
   display: inline-block;
-  /* width: 218px; */
   margin: 0 30px 0 30px;
 }
 
