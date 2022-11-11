@@ -334,7 +334,6 @@ form:invalid button{
   align-items: center;
   height: 27px;
   width: 10px;
-  /* padding: 8px 0; */
   z-index: 1;
 }
 
@@ -353,7 +352,7 @@ form:invalid button{
   line-height: 140%;
   color: #333B41;
   position: relative;
-  left: -30px;
+  left: -40px;
   top: 45px;
   /* padding: 10px; */
   /* margin-top: 40px; */
@@ -362,12 +361,9 @@ form:invalid button{
 .amount_picker input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
-  background-color: #FFEE2E;
-  /* padding: 0px; */
-  font: inherit;
-  color: #72828E;
   display: inline-block;
   vertical-align: top;
+  background-color: #FFEE2E;
   width: 10px;
   height: 10px;
   border: none;
@@ -375,33 +371,30 @@ form:invalid button{
   z-index: 1;
 }
 
-.amount_picker input[type="radio"]::before {
+.amount_picker input[type="radio"]:before {
   content: "";
   display: inline-block;
-  width: 0.65em;
-  height: 0.65em;
+  vertical-align: top;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
 }
 
-.amount_picker input[type="radio"]:checked::before {
-  /* transform: scale(1); */
+.amount_picker input[type="radio"]:checked:before {
+  outline: 1.7px solid #FE9013;
+  outline-offset: 13px;
 }
 
 .amount_picker input[type="radio"]:checked {
-  /* padding: 6px; */
-  /* border: 1.5px solid #FE9013; */
-  outline: 16px double #FE9013;
-  outline-offset: 3px;
-  /* box-shadow: 0 0 0 6px rgba(0, 0, 0, 0), 0 0 0 9px #FE9013, 0 0 0 13px rgba(0, 0, 0, 0), 0 0 0 17px #FE9013; */
+  outline: 1.7px solid #FE9013;
+  outline-offset: 4.5px;
 }
 
 .amount_picker input[type="radio"]:checked + label {
   color: #FE9013;
 }
 
-/* Firefox */
+/* input field remove spin btns Firefox */
 .form_rest input[type=number] {
   -moz-appearance: textfield;
   width: 268px;
@@ -421,7 +414,7 @@ form:invalid button{
   background-position: right 10px top 17px;
 }
 
-/* Chrome, Safari, Edge, Opera */
+/* input field remove spin btns Chrome, Safari, Edge, Opera */
 .form_rest input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
