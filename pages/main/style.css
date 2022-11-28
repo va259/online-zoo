@@ -20,13 +20,74 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.container {
-  position: relative;
-  width: 1600px;
-}
-
 header nav {
   background-color: #000;
+}
+
+@media screen and (max-width: 1599px) {
+  .container {
+    position: relative;
+    width: 1600px;
+  }
+
+  .four {
+    display: flex;
+    align-items: stretch;
+    background: var(--orange_gradient);
+    text-align: center;
+  }
+  
+  .container__four {
+    width: 1160px;
+    margin: 69px 220px 100px 220px;
+    padding: 41px 0px 59px 0px;
+    background: var(--frosted_glass_white);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    color: #333B41;
+  }
+  
+  .container__four .text {
+    padding-left: 99px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    position: relative;
+    width: 1000px;
+  }
+
+  .four {
+    display: flex;
+    align-items: stretch;
+    background: var(--orange_gradient);
+    text-align: center;
+  }
+  
+  .container__four {
+    width: 940px;
+    margin: 30px 30px 50px 30px;
+    padding: 30px 49px 50px 49px;
+    background: var(--frosted_glass_white);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    color: #333B41;
+  }
+  
+  .container__four .text {
+    padding-left: 99px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
 }
 
 header nav ul {
@@ -97,7 +158,8 @@ header a.active {
   color: #F9804B;
 }
 
-.one__image {
+.one {
+  position: relative;
   height: 700px;
   width: 100%;
   background-image: url(../../assets/images/bg-images/giant-panda.jpg);
@@ -105,12 +167,23 @@ header a.active {
   background-position: bottom 0px left 0px;
 }
 
+.one__ellipse {
+  position: absolute;
+  top: 12px;
+  /* left: 800px; */
+  left: 50%;
+  width: 465px;
+  height: 465px;
+  background: var(--orange);
+  border-radius: 50%;
+}
+
 .one__text {
   position: absolute;
-  width: 500.31px;
+  width: 500px;
   height: 400px;
-  left: 880px;
-  top: 80px;
+  left: calc(50% + 80px);
+  /* top: 86px; */
   font-weight: 700;
   font-size: 70px;
   line-height: 114%;
@@ -122,16 +195,6 @@ header a.active {
 
 .one__text .one__yellow {
   color: var(--yellow);
-}
-
-.one__ellipse {
-  position: absolute;
-  top: 92px;
-  left: calc(50% - 465px/2 + 239.5px);
-  width: 465px;
-  height: 465px;
-  background: var(--orange);
-  border-radius: 50%;
 }
 
 .button {
@@ -449,28 +512,6 @@ form:invalid button{
   margin-bottom: 15px;
 }
 
-.four {
-  display: flex;
-  align-items: stretch;
-  background: var(--orange_gradient);
-  text-align: center;
-}
-
-.container__four {
-  width: 1160px;
-  margin: 69px 220px 100px 220px;
-  padding: 41px 0px 59px 0px;
-  background: var(--frosted_glass_white);
-  backdrop-filter: blur(2px);
-  border-radius: 20px;
-  color: #333B41;
-}
-
-.container__four .text {
-  padding-left: 99px;
-  text-align: left;
-}
-
 .four h2 {
   font-weight: 400;
   font-size: 48px;
@@ -709,18 +750,18 @@ form:invalid button{
 
 footer {
   background: #111115;
-  width: 1600px;
+  width: 100%;
   height: 443px;
   color: #fff;
-  margin: 0px auto;
+  /* margin: 0px auto; */
 }
 
-footer .container {
+.footer_container {
   width: 1160px;
   height: 370px;
   padding: 40px 0px 30px 0px;
-  display: flex;
   margin: 0px auto;
+  display: flex;
 }
 
 footer .left {
@@ -743,7 +784,7 @@ footer .button {
 footer .logo {
   width: 82px;
   height: 52px;
-  font-size: 19.01px;
+  font-size: 19px;
   font-weight: 300;
   line-height: 120%;
   border: 1px solid #fff;
