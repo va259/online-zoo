@@ -20,50 +20,60 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-header nav {
-  background-color: #000;
-}
-
-@media screen and (max-width: 1599px) {
+@media screen and (max-width: 1600px) {
   .container {
     max-width: 1160px;
     margin: 0 auto;
   }
 
-}
+  .pagination {
+    top: -23px;
+    width: 1322px;
+    height: 20px;
+  }
 
 @media screen and (max-width: 1000px) {
   .container {
-    /* max-width: 1000px; */
+    max-width: 940px;
     margin: 0 auto;
   }
-  
-  /* .container__four {
-    width: 940px;
-    margin: 30px 30px 50px 30px;
-    padding: 30px 49px 50px 49px;
-    background: var(--frosted_glass_white);
-    backdrop-filter: blur(2px);
-    border-radius: 20px;
-    color: #333B41;
+
+  .pagination {
+    top: 0;
+    width: 295px;
+    height: 92px;
+    align-items: center;
   }
   
-  .container__four .text {
-    padding-left: 99px;
-    text-align: left;
-  } */
 }
 
 @media screen and (max-width: 640px) {
-  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .pagination {
+    top: 0;
+    width: 154px;
+    height: 92px;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 320px) {
+  .container {
+    max-width: 300px;
+    margin: 0 auto;
+  }
 
+  .pagination {
+    display: none !important;
+  }
 }
 
-header .container {
-  /* width: 1160px; */
+header {
+  background-color: #000;
 }
 
 header nav ul {
@@ -71,7 +81,7 @@ header nav ul {
   height: 80px;
   align-items: center;
   list-style-type: none;
-  margin: 0px 220px;
+  margin: 0px;
   padding: 0px;
   overflow: hidden;
   flex-wrap: nowrap;
@@ -137,7 +147,6 @@ header a.active {
 .one {
   position: relative;
   height: 700px;
-  /* width: 100%; */
   background-image: url(../../assets/images/bg-images/giant-panda.jpg);
   background-repeat: no-repeat;
   background-position: bottom 0px left 0px;
@@ -335,12 +344,9 @@ form:invalid button{
 
 .pagination {
   position: relative;
-  top: -23px;
-  width: 1322px;
-  height: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  /* align-items: baseline; */
 }
 
 .circle_arrow {
