@@ -25,13 +25,58 @@ body {
   margin: 0 auto;
 }
 
-/* .pagination {
-  top: -23px;
-  width: 1322px;
-  height: 20px;
-} */
-/* @media screen and (min-width: 1600px) { */
+.button {
+  width: 298px;
+  height: 54px;
+  background: var(--orange);
+  border-radius: 25px;
+  border: 0px;
+  text-transform: uppercase;
+  color: #fff;
+}
 
+.button:hover {
+  background: var(--clementine);
+  cursor: pointer;
+}
+
+.button:active {
+  background: var(--green);
+}
+
+.button:disabled {
+  background: var(--gray);
+}
+
+.square {
+  border-radius: 5px;
+}
+
+.button_form {
+  width: 129px;
+  height: 42px;
+  background: #F1F3F2;
+  border: 1px solid #4B9200;
+  color: #4B9200;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  cursor: pointer;
+}
+
+.button_form:hover {
+  border: 1px solid var(--clementine);
+  color: var(--clementine);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form:invalid button{
+  border: 1px solid #D31414;
+  color: #D31414;
+  cursor: pointer;
+}
 
 /* header */
 
@@ -164,59 +209,6 @@ header a.active {
   top: 546px;
 }
 
-.button {
-  width: 298px;
-  height: 54px;
-  background: var(--orange);
-  border-radius: 25px;
-  border: 0px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.button:hover {
-  background: var(--clementine);
-  cursor: pointer;
-}
-
-.button:active {
-  background: var(--green);
-}
-
-.button:disabled {
-  background: var(--gray);
-}
-
-.square {
-  border-radius: 5px;
-}
-
-.button_form {
-  width: 129px;
-  height: 42px;
-  background: #F1F3F2;
-  border: 1px solid #4B9200;
-  color: #4B9200;
-  border-radius: 5px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  cursor: pointer;
-}
-
-.button_form:hover {
-  border: 1px solid var(--clementine);
-  color: var(--clementine);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form:invalid button{
-  border: 1px solid #D31414;
-  color: #D31414;
-  cursor: pointer;
-}
-
 /* section 2 */
 
 .two {
@@ -225,6 +217,7 @@ form:invalid button{
   height: 617px;
   padding-top: 140px;
   background-image: url(../../assets/images/bg-images/back-1-flower.png);
+  background-size: 293px 605px;
   background-repeat: no-repeat;
   background-position: top 12px right 0px;
 }
@@ -611,14 +604,15 @@ form:invalid button{
 }
 
 .five {
-  /* display: flex;
-  justify-content: center; */
-  /* height: 919px; */
   background: #fff;
   background-image: url(../../assets/images/bg-images/back-4-leaf.png);
   background-size: 409px 407px;
   background-position: right -163px bottom -132px;
   background-repeat: no-repeat;
+}
+
+.five .container {
+  position: relative;
 }
 
 .five h4 {
@@ -1043,10 +1037,60 @@ input[type=email] {
     background-size: 325px 324px;
     background-position: right -129px bottom -85px;
   }
+
+  .five h4 {
+    font-size: 36px;
+    line-height: 130%;
+    margin: 100px 0 0 0;
+  }
+
+  .testimonials {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 391px;
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  .testimonials .card:last-child {
+    display: none;
+  }
+
+  .testimonials .card {
+    width: 293px;
+    height: 391px;
+  }
+
+  .card_inner {
+    margin: 0px 18px 19px 16px;
+  }
+
+  .card .user {
+    margin-top: 15px;
+  }
+
+  .card p {
+    width: 255px;
+    height: 309px;
+    overflow: hidden;
+    /* white-space: nowrap; */
+  }
+
+  .scroll {
+    width: 390px;
+    margin: 20px auto 0 auto;
+  }
+
+  .five .button {
+    width: 240px;
+    margin: 52px 0 80px 0;
+  }
 }
 
 @media screen and (min-width: 640px) and (max-width: 999px) {
   .container {
+    position: relative;
     max-width: 600px;
     margin: 0 auto;
   }
@@ -1091,7 +1135,7 @@ input[type=email] {
     background-image: url(../../assets/images/bg-images/back-1-flower.png);
     background-repeat: no-repeat;
     background-size: 231px 476px;
-    background-position: top 5px right -104px;
+    background-position: top -5px right -104.5px;
   }
 
   .two .container {
@@ -1262,6 +1306,55 @@ input[type=email] {
     background-size: 204px 203px;
     background-position: right -88px bottom -69px;
   }
+
+  .five h4 {
+    font-size: 36px;
+    line-height: 120%;
+    margin: 60px 0 0 0;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 357px;
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  .testimonials .card:last-child {
+    display: none;
+  }
+
+  .testimonials .card {
+    width: 600px;
+    height: 109px;
+  }
+
+  .card_inner {
+    margin: 0px 29px 8px 18px;
+  }
+
+  .card .user {
+    margin-top: 15px;
+  }
+
+  .card p {
+    width: 553px;
+    height: 38px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+  .five .button {
+    display: block;
+    width: 240px;
+    margin: 40px auto 80px auto;
+  }
 }
 
 @media screen and (min-width: 0px) and (max-width: 639px) {
@@ -1313,7 +1406,7 @@ input[type=email] {
     padding: 0;
     background-image: url(../../assets/images/bg-images/back-1-flower.png);
     background-repeat: no-repeat;
-    background-position: top 38px right -70px;
+    background-position: top 38px right -74px;
     background-size: 105px 217px;
   }
 
@@ -1495,7 +1588,7 @@ input[type=email] {
   .five h4 {
     font-size: 24px;
     line-height: 120%;
-    margin-top: 30px;
+    margin: 30px 0 0 0;
   }
 
   .testimonials {
@@ -1503,10 +1596,25 @@ input[type=email] {
     justify-content: space-between;
     max-width: 300px;
     height: 357px;
+    margin-top: 20px;
+    gap: 15px;
   }
 
-  .testimonials:last-child {
+  .testimonials .card:last-child {
     display: none;
+  }
+
+  .testimonials .card {
+    width: 300px;
+    height: 109px;
+  }
+
+  .card_inner {
+    margin: 0px 29px 12px 18px;
+  }
+
+  .card .user {
+    margin-top: 11px;
   }
 
   .card p {
@@ -1521,7 +1629,8 @@ input[type=email] {
   }
 
   .five .button {
-    display: none;
-    margin: 31 px 0 180px 0;
+    display: block;
+    width: 240px;
+    margin: 30px auto 60px auto;
   }
 }
