@@ -540,6 +540,7 @@ form:invalid button{
 
 .how_it_works {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   width: 764px;
   height: 244px;
@@ -549,6 +550,7 @@ form:invalid button{
 .how_it_works .card_container {
   width: 168px;
   height: 244px;
+  /* z-index: -10; */
 }
 
 .how_it_works .arrow_container {
@@ -557,6 +559,7 @@ form:invalid button{
   background-position: center;
   width: 130px;
   height: 168px;
+  z-index: 10;
 }
 
 .how_it_works .card {
@@ -572,11 +575,13 @@ form:invalid button{
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
+  padding: 0;
+  margin: 0;
   color: #333B41;
   text-align: left;
 }
 
-.container__four a {
+.four .container a {
   text-decoration: none;
   border-bottom: 1px solid #FE9013;
   color: #333B41;
@@ -611,14 +616,9 @@ form:invalid button{
   /* height: 919px; */
   background: #fff;
   background-image: url(../../assets/images/bg-images/back-4-leaf.png);
-  background-position: right bottom -130px;
+  background-size: 409px 407px;
+  background-position: right -163px bottom -132px;
   background-repeat: no-repeat;
-}
-
-.five .container {
-  /* height: 575px; */
-  /* width: 1160px; */
-  display: block;
 }
 
 .five h4 {
@@ -1028,6 +1028,21 @@ input[type=email] {
     width: 294px;
     height: 354px;
   }
+
+  .four {
+    padding: 30px 30px 50px 30px;
+  }
+
+  .four .container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 30px 48px 50px 49px;
+  }
+
+  .five {
+    background-size: 325px 324px;
+    background-position: right -129px bottom -85px;
+  }
 }
 
 @media screen and (min-width: 640px) and (max-width: 999px) {
@@ -1179,6 +1194,73 @@ input[type=email] {
 
   .card_6 {
     display: none;
+  }
+
+  .button__three {
+    margin: 60px auto 0 auto;
+  }
+  
+  .four {
+    color: #333B41;
+    padding: 20px 0 20px 0;
+  }
+  
+  .four .container {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 10px 20px 60px 20px;
+  }
+  
+  .four h2 {
+    font-size: 42px;
+  }
+  
+  .four h3 {
+    font-size: 22px;
+    line-height: 120%;
+    margin-top: 20px;
+  }
+  
+  .four h4 {
+    font-size: 22px;
+    line-height: 120%;
+  }
+  
+  .four strong {
+    font-weight: 500;
+  }
+
+  .how_it_works {
+    width: 588px;
+    height: 260px;
+  }
+
+  .how_it_works .card_container {
+    padding-top: 16px;
+    z-index: -10!important;
+  }
+  
+  .how_it_works .arrow_container {
+    background-image: url(../../assets/images/vector/how-it-works-arr-640.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 right -11px;
+    width: 42px;
+    height: 244px;
+    z-index: 10!important;
+  }
+  
+  .how_it_works p {
+    margin-top: 30px;
+  }
+
+  .button__four {
+    margin: 40px auto 0 auto;
+  }
+
+  .five {
+    background-size: 204px 203px;
+    background-position: right -88px bottom -69px;
   }
 }
 
@@ -1346,5 +1428,100 @@ input[type=email] {
 
   .card_6 {
     display: none;
+  }
+
+  .four {
+    color: #333B41;
+    padding: 20px 10px;
+  }
+  
+  .four .container {
+    max-width: 100%;
+    padding: 20px 0 40px 0;
+  }
+  
+  .four h2 {
+    font-size: 24px;
+  }
+
+  .four .text {
+    display: none;
+  }
+  
+  .four h3 {
+    font-size: 24px;
+    line-height: 120%;
+    margin: 20px 0 0 0;
+  }
+  
+  .four h4 {
+    display: none;
+  }
+
+  .how_it_works {
+    width: 168px;
+    height: 724px;
+    flex-direction: column;
+  }
+
+  .how_it_works .card_container {
+    padding-top: 16px;
+    z-index: -10;
+  }
+  
+  .how_it_works .arrow_container {
+    /* background-image: url(../../assets/images/vector/how-it-works-arr-640.svg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: top 0 right -11px; */
+    width: 42px;
+    height: 244px;
+    z-index: 10;
+  }
+  
+  .how_it_works p {
+    height: 44px;
+    margin-top: 10px;
+  }
+
+  .button__four {
+    margin: 30px auto 0 auto;
+  }
+
+  .five {
+    background-size: 110px 109px;
+    background-position: right -39px bottom -41px;
+  }
+
+  .five h4 {
+    font-size: 24px;
+    line-height: 120%;
+    margin-top: 30px;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px;
+    height: 357px;
+  }
+
+  .testimonials:last-child {
+    display: none;
+  }
+
+  .card p {
+    width: 252px;
+    height: 38px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+  .five .button {
+    display: none;
+    margin: 31 px 0 180px 0;
   }
 }
