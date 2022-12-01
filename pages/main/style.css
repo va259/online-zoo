@@ -25,19 +25,65 @@ body {
   margin: 0 auto;
 }
 
-/* .pagination {
-  top: -23px;
-  width: 1322px;
-  height: 20px;
-} */
-/* @media screen and (min-width: 1600px) { */
+.button {
+  width: 298px;
+  height: 54px;
+  background: var(--orange);
+  border-radius: 25px;
+  border: 0px;
+  text-transform: uppercase;
+  color: #fff;
+}
 
+.button:hover {
+  background: var(--clementine);
+  cursor: pointer;
+}
+
+.button:active {
+  background: var(--green);
+}
+
+.button:disabled {
+  background: var(--gray);
+}
+
+.square {
+  border-radius: 5px;
+}
+
+.button_form {
+  width: 129px;
+  height: 42px;
+  background: #F1F3F2;
+  border: 1px solid #4B9200;
+  color: #4B9200;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  cursor: pointer;
+}
+
+.button_form:hover {
+  border: 1px solid var(--clementine);
+  color: var(--clementine);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form:invalid button{
+  border: 1px solid #D31414;
+  color: #D31414;
+  cursor: pointer;
+}
 
 /* header */
 
 header {
+  position: relative;
   background: #000;
-  /* z-index: 1 !important; */
+  z-index: 1;
 }
 
 header nav ul {
@@ -119,6 +165,7 @@ header a.active {
   background-image: url(../../assets/images/bg-images/giant-panda.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  box-sizing: content-box;
   /* background-position: bottom 0px left 0px; */
 }
 
@@ -163,66 +210,17 @@ header a.active {
   top: 546px;
 }
 
-.button {
-  width: 298px;
-  height: 54px;
-  background: var(--orange);
-  border-radius: 25px;
-  border: 0px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.button:hover {
-  background: var(--clementine);
-  cursor: pointer;
-}
-
-.button:active {
-  background: var(--green);
-}
-
-.button:disabled {
-  background: var(--gray);
-}
-
-.square {
-  border-radius: 5px;
-}
-
-.button_form {
-  width: 129px;
-  height: 42px;
-  background: #F1F3F2;
-  border: 1px solid #4B9200;
-  color: #4B9200;
-  border-radius: 5px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  cursor: pointer;
-}
-
-.button_form:hover {
-  border: 1px solid var(--clementine);
-  color: var(--clementine);
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form:invalid button{
-  border: 1px solid #D31414;
-  color: #D31414;
-  cursor: pointer;
-}
-
 /* section 2 */
 
 .two {
-  background-image: url(../../assets/images/bg-images/back-1-flower.png);
-  background-repeat: no-repeat;
-  background-position: top 12px right 0px;
+  position: relative;
+  box-sizing: border-box;
   height: 617px;
+  padding: 140px 0 0 0;
+  background-image: url(../../assets/images/bg-images/back-1-flower.png);
+  background-size: 293px 605px;
+  background-repeat: no-repeat;
+  background-position: top 12px right -93px;
 }
 
 /* .container__two {
@@ -241,7 +239,7 @@ form:invalid button{
   justify-content: space-between;
   /* padding: 140px 0 0 219px; */
   /* padding-top: 140px; */
-  padding: 0;
+  /* padding: 0; */
 }
 
 .img__two {
@@ -293,15 +291,17 @@ form:invalid button{
   padding: 0px;
 }
 
+/* section 3 */
+
 .three {
   position: relative;
+  box-sizing: border-box;
+  padding: 106px 0 100px 0;
   background-image: url(../../assets/images/bg-images/back-2-palm.png),
                     url(../../assets/images/bg-images/back-3-strelitzia.png);
-  background-position: left bottom, right bottom;
+  background-size: 386px 202px, 241px 180px;
+  background-position: left -251px bottom 0, right 0 bottom -4px;
   background-repeat: no-repeat, no-repeat;
-  /* height: 2600px; */
-  padding: 106px 0 100px 0;
-  height: 1006px;
 }
 
 .three .container {
@@ -314,16 +314,19 @@ form:invalid button{
   
 .animals_container {
   position: relative;
-  max-width: 1158px;
+  max-width: 100%px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
 }
 
 .pagination {
   position: relative;
   display: flex;
   justify-content: space-between;
+  top: -23px;
+  width: 1322px;
+  height: 20px;
   /* align-items: baseline; */
 }
 
@@ -383,10 +386,6 @@ form:invalid button{
 @keyframes scaleUp {
   from {background-size: 117%} to {background-size: 130%};
 }
-
-/* @keyframes scaleUp {
-  from {background-size: 120%} to {background-size: 130%};
-} */
 
 .animal_card .animal_info {
   display: flex;
@@ -480,6 +479,7 @@ form:invalid button{
 
 .button__three {
   display: block;
+  width: 298px;
   margin: 80px auto 0 auto;
 }
 
@@ -531,7 +531,9 @@ form:invalid button{
 }
 
 .how_it_works {
+  position: relative;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   width: 764px;
   height: 244px;
@@ -541,6 +543,7 @@ form:invalid button{
 .how_it_works .card_container {
   width: 168px;
   height: 244px;
+  z-index: -10 !important;
 }
 
 .how_it_works .arrow_container {
@@ -549,6 +552,7 @@ form:invalid button{
   background-position: center;
   width: 130px;
   height: 168px;
+  z-index: 10 !important;
 }
 
 .how_it_works .card {
@@ -564,11 +568,13 @@ form:invalid button{
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
+  padding: 0;
+  margin: 0;
   color: #333B41;
   text-align: left;
 }
 
-.container__four a {
+.four .container a {
   text-decoration: none;
   border-bottom: 1px solid #FE9013;
   color: #333B41;
@@ -598,19 +604,15 @@ form:invalid button{
 }
 
 .five {
-  /* display: flex;
-  justify-content: center; */
-  /* height: 919px; */
   background: #fff;
   background-image: url(../../assets/images/bg-images/back-4-leaf.png);
-  background-position: right bottom -130px;
+  background-size: 409px 407px;
+  background-position: right -163px bottom -132px;
   background-repeat: no-repeat;
 }
 
 .five .container {
-  /* height: 575px; */
-  /* width: 1160px; */
-  display: block;
+  position: relative;
 }
 
 .five h4 {
@@ -908,7 +910,7 @@ input[type=email] {
   background-color: transparent;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (min-width: 1600px) {
   .container {
     max-width: 1160px;
     margin: 0 auto;
@@ -916,28 +918,17 @@ input[type=email] {
 
   .one {
     position: relative;
-    /* width: 1600px; */
     height: 700px;
     background-image: url(../../assets/images/bg-images/giant-panda.jpg);
     background-repeat: no-repeat;
-    /* background-position: bottom 0px left 0px; */
+    background-position: bottom 0px left 0px;
     background-size: cover;
-  }
-
-  .two {
-    padding-top: 140px;
-  }
-
-  .pagination {
-    top: -23px;
-    width: 1322px;
-    height: 20px;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1000px) and (max-device-width: 1599px){
   .container {
-    max-width: 1000px;
+    max-width: 940px;
     margin: 0 auto;
   }
 
@@ -957,6 +948,7 @@ input[type=email] {
     left: calc(50%-44px);
     width: 367px;
     height: 367px;
+    z-index: -1 !important;
   }
 
   .one__text {
@@ -975,14 +967,14 @@ input[type=email] {
   }
 
   .two {
-    background-image: none;
-    height: 427px;
+    box-sizing: border-box;
     width: 100%;
-    padding-top: 100px;
+    height: 427px;
+    padding: 100px 0 0 0;
+    background-image: none;
   }
 
   .two .container {
-    height: 427px;
     justify-content: space-between;
     align-items: center;
   }
@@ -1010,17 +1002,100 @@ input[type=email] {
     height: 427px;
   }
 
+  .three {
+    width: 100%;
+    margin-top: 142px;
+  }
+
+  .animals_container {
+    max-width: 100%;
+    gap: 29px;
+  }
+
   .pagination {
     top: 0;
     width: 295px;
     height: 92px;
     align-items: center;
   }
-  
+
+  .animal_card {
+    width: 294px;
+    height: 354px;
+  }
+
+  .button__three {
+    margin: 80px auto 0 auto;
+  }
+
+  .four {
+    padding: 30px 30px 50px 30px;
+  }
+
+  .four .container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 30px 48px 50px 49px;
+  }
+
+  .five {
+    background-size: 325px 324px;
+    background-position: right -129px bottom -85px;
+  }
+
+  .five h4 {
+    font-size: 36px;
+    line-height: 130%;
+    margin: 100px 0 0 0;
+  }
+
+  .testimonials {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 391px;
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  .testimonials .card:last-child {
+    display: none;
+  }
+
+  .testimonials .card {
+    width: 293px;
+    height: 391px;
+  }
+
+  .card_inner {
+    margin: 0px 18px 19px 16px;
+  }
+
+  .card .user {
+    margin-top: 15px;
+  }
+
+  .card p {
+    width: 255px;
+    height: 309px;
+    overflow: hidden;
+    /* white-space: nowrap; */
+  }
+
+  .scroll {
+    width: 390px;
+    margin: 20px auto 0 auto;
+  }
+
+  .five .button {
+    width: 240px;
+    margin: 52px 0 80px 0;
+  }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 640px) and (max-width: 999px) {
   .container {
+    position: relative;
     max-width: 600px;
     margin: 0 auto;
   }
@@ -1053,18 +1128,20 @@ input[type=email] {
   }
 
   .button__one {
-    left: 20px;
+    position: relative;
+    left: 0px;
     top: 245px;
   }
 
   .two {
+    box-sizing: border-box;
+    width: 100%;
+    height: 471px;
+    padding: 60px 0 0 0;
     background-image: url(../../assets/images/bg-images/back-1-flower.png);
     background-repeat: no-repeat;
     background-size: 231px 476px;
-    background-position: top 5px right -104px;
-    height: 476px;
-    width: 100%;
-    padding-top: 60px;
+    background-position: top -5px right -104.5px;
   }
 
   .two .container {
@@ -1084,8 +1161,24 @@ input[type=email] {
     justify-content: space-between;
     flex-direction: column;
     align-content: center;
-    width: 495px;
+    margin-right: 125px;
     height: 367px;
+  }
+
+  .three {
+    width: 100%;
+    padding: 36px 0 100px 0;
+    background-size: 385px 202px, 175px 131px;
+    background-position: left -192px bottom 0, right 0 bottom 0;
+  }
+
+  .three .container {
+    margin: 0 auto;
+  }
+
+  .animals_container {
+    max-width: 100%;
+    gap: 30px;
   }
 
   .pagination {
@@ -1094,9 +1187,186 @@ input[type=email] {
     height: 92px;
     align-items: center;
   }
+
+  .animal_card {
+    width: 285px;
+    height: 332px;
+  }
+
+  .animal_card .animal_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 60px;
+    margin: 8px 16px 0px;
+    padding: 0px;
+  }
+  
+  .animal_info__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 46.76px;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .animal_card h4 {
+    font-size: 12.47px;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .animal_card p {
+    font-size: 11.69px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .feed_icon.weed_eater {
+    background-size: cover;
+    width: 25.72px;
+    height: 28.84px;
+    margin: 8px 9px 10px 0;
+  }
+
+  .feed_icon.flesh_eater {
+    background-size: cover;
+    width: 37.41px;
+    height: 29.62px;
+    margin: 6px 6px 11px 0;
+  }
+
+  .card_3 {
+    display: none;
+  }
+
+  .card_6 {
+    display: none;
+  }
+
+  .button__three {
+    margin: 60px auto 0 auto;
+  }
+  
+  .four {
+    position: relative;
+    color: #333B41;
+    padding: 20px 0 20px 0;
+  }
+  
+  .four .container {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 10px 20px 60px 20px;
+  }
+  
+  .four h2 {
+    font-size: 42px;
+  }
+  
+  .four h3 {
+    font-size: 22px;
+    line-height: 120%;
+    margin-top: 20px;
+  }
+  
+  .four h4 {
+    font-size: 22px;
+    line-height: 120%;
+  }
+  
+  .four strong {
+    font-weight: 500;
+  }
+
+  .how_it_works {
+    width: 588px;
+    height: 260px;
+  }
+
+  .how_it_works .card_container {
+    position: relative;
+    padding-top: 16px;
+    z-index: -10!important;
+  }
+  
+  .how_it_works .arrow_container {
+    position: relative;
+    background-image: url(../../assets/images/vector/how-it-works-arr-640.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 right -11px;
+    width: 42px;
+    height: 244px;
+    z-index: 100!important;
+  }
+  
+  .how_it_works p {
+    margin-top: 30px;
+  }
+
+  .button__four {
+    margin: 40px auto 0 auto;
+  }
+
+  .five {
+    background-size: 204px 203px;
+    background-position: right -88px bottom -69px;
+  }
+
+  .five h4 {
+    font-size: 36px;
+    line-height: 120%;
+    margin: 60px 0 0 0;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 357px;
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  .testimonials .card:last-child {
+    display: none;
+  }
+
+  .testimonials .card {
+    width: 600px;
+    height: 109px;
+  }
+
+  .card_inner {
+    margin: 0px 29px 8px 18px;
+  }
+
+  .card .user {
+    margin-top: 15px;
+  }
+
+  .card p {
+    width: 553px;
+    height: 38px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+  .five .button {
+    display: block;
+    width: 240px;
+    margin: 40px auto 80px auto;
+  }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 0px) and (max-width: 639px) {
   .container {
     max-width: 300px;
     margin: 0 auto;
@@ -1118,7 +1388,7 @@ input[type=email] {
     left: calc(50% + 3px);
     width: 119.09px;
     height: 119.09px;
-    z-index: -2;
+    /* z-index: -2; */
   }
 
   .one__text {
@@ -1132,18 +1402,20 @@ input[type=email] {
   }
 
   .button__one {
-    left: 9px;
+    position: relative;
+    margin: 0 auto;
+    left: 0px;
     top: 207px;
   }
 
   .two {
-    height: 454px;
     width: 100%;
+    height: 492px;
+    padding: 104px 0 0 0;
     background-image: url(../../assets/images/bg-images/back-1-flower.png);
     background-repeat: no-repeat;
-    background-position: top 38px right -70px;
+    background-position: top 38px right -74px;
     background-size: 105px 217px;
-    padding-top: 104px;
   }
 
   .two .container {
@@ -1160,11 +1432,11 @@ input[type=email] {
 
   .content__two {
     display: flex;
+    width: 300px;
+    height: 388px;
     justify-content: space-between;
     flex-direction: column;
     align-content: center;
-    width: 300px;
-    height: 388px;
   }
 
   .two h2 {
@@ -1181,7 +1453,198 @@ input[type=email] {
     line-height: 130%;
   }
 
+  .three {
+    width: 100%;
+    height: 1562px;
+    padding: 40px 0 134px 0;
+    background-size: 138px 72px, 85px 71px;
+    background-position: left -80px bottom 0, right -17px bottom 0;
+  }
+
+  .three .container {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .animals_container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .animals_second {
+    margin-top: 20px;
+  }
+
   .pagination {
     display: none !important;
+  }
+
+  .animal_card {
+    width: 285px;
+    height: 332px;
+  }
+
+  .animal_card .animal_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 60px;
+    margin: 8px 16px 0px;
+    padding: 0px;
+  }
+  
+  .animal_info__container {
+    height: 46.76px;
+  }
+  
+  .animal_card h4 {
+    font-size: 12.47px;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .animal_card p {
+    font-size: 11.69px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .feed_icon.weed_eater {
+    background-size: cover;
+    width: 25.72px;
+    height: 28.84px;
+    margin: 8px 9px 10px 0;
+  }
+
+  .feed_icon.flesh_eater {
+    background-size: cover;
+    width: 37.41px;
+    height: 29.62px;
+    margin: 6px 6px 11px 0;
+  }
+
+  .card_5 {
+    display: none;
+  }
+
+  .card_6 {
+    display: none;
+  }
+
+  .button__three {
+    margin: 20px auto 0 auto;
+  }
+
+  .four {
+    color: #333B41;
+    padding: 20px 10px;
+  }
+  
+  .four .container {
+    max-width: 100%;
+    padding: 20px 0 40px 0;
+  }
+  
+  .four h2 {
+    font-size: 24px;
+  }
+
+  .four .text {
+    display: none;
+  }
+  
+  .four h3 {
+    font-size: 24px;
+    line-height: 120%;
+    margin: 20px 0 0 0;
+  }
+  
+  .four h4 {
+    display: none;
+  }
+
+  .how_it_works {
+    width: 168px;
+    height: 724px;
+    flex-direction: column;
+  }
+
+  .how_it_works .card_container {
+    padding-top: 16px;
+    z-index: -10;
+  }
+  
+  .how_it_works .arrow_container {
+    /* background-image: url(../../assets/images/vector/how-it-works-arr-640.svg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: top 0 right -11px; */
+    width: 42px;
+    height: 244px;
+    z-index: 10;
+  }
+  
+  .how_it_works p {
+    height: 44px;
+    margin-top: 10px;
+  }
+
+  .button__four {
+    display: block;
+    width: 298px;
+    margin: 30px auto 0 auto;
+  }
+
+  .five {
+    background-size: 110px 109px;
+    background-position: right -39px bottom -41px;
+  }
+
+  .five h4 {
+    font-size: 24px;
+    line-height: 120%;
+    margin: 30px 0 0 0;
+  }
+
+  .testimonials {
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px;
+    height: 357px;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .testimonials .card:last-child {
+    display: none;
+  }
+
+  .testimonials .card {
+    width: 300px;
+    height: 109px;
+  }
+
+  .card_inner {
+    margin: 0px 29px 12px 18px;
+  }
+
+  .card .user {
+    margin-top: 11px;
+  }
+
+  .card p {
+    width: 252px;
+    height: 38px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+  .five .button {
+    display: block;
+    width: 240px;
+    margin: 30px auto 60px auto;
   }
 }
