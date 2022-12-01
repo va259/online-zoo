@@ -119,6 +119,7 @@ header a.active {
   background-image: url(../../assets/images/bg-images/giant-panda.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  box-sizing: content-box;
   /* background-position: bottom 0px left 0px; */
 }
 
@@ -219,10 +220,13 @@ form:invalid button{
 /* section 2 */
 
 .two {
+  position: relative;
+  box-sizing: border-box;
+  height: 617px;
+  padding-top: 140px;
   background-image: url(../../assets/images/bg-images/back-1-flower.png);
   background-repeat: no-repeat;
   background-position: top 12px right 0px;
-  height: 617px;
 }
 
 /* .container__two {
@@ -241,7 +245,7 @@ form:invalid button{
   justify-content: space-between;
   /* padding: 140px 0 0 219px; */
   /* padding-top: 140px; */
-  padding: 0;
+  /* padding: 0; */
 }
 
 .img__two {
@@ -295,13 +299,14 @@ form:invalid button{
 
 .three {
   position: relative;
+  height: 1006px;
+  margin-top: 106px;
+  box-sizing: border-box;
   background-image: url(../../assets/images/bg-images/back-2-palm.png),
                     url(../../assets/images/bg-images/back-3-strelitzia.png);
-  background-position: left bottom, right bottom;
+  background-size: 386px 202px, 241px 180px;
+  background-position: left -251px bottom 0, right 0 bottom -4px;
   background-repeat: no-repeat, no-repeat;
-  /* height: 2600px; */
-  padding: 106px 0 100px 0;
-  height: 1006px;
 }
 
 .three .container {
@@ -314,16 +319,19 @@ form:invalid button{
   
 .animals_container {
   position: relative;
-  max-width: 1158px;
+  max-width: 100%px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
 }
 
 .pagination {
   position: relative;
   display: flex;
   justify-content: space-between;
+  top: -23px;
+  width: 1322px;
+  height: 20px;
   /* align-items: baseline; */
 }
 
@@ -908,7 +916,7 @@ input[type=email] {
   background-color: transparent;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (min-width: 1600px) {
   .container {
     max-width: 1160px;
     margin: 0 auto;
@@ -923,21 +931,11 @@ input[type=email] {
     /* background-position: bottom 0px left 0px; */
     background-size: cover;
   }
-
-  .two {
-    padding-top: 140px;
-  }
-
-  .pagination {
-    top: -23px;
-    width: 1322px;
-    height: 20px;
-  }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1000px) and (max-device-width: 1599px){
   .container {
-    max-width: 1000px;
+    max-width: 940px;
     margin: 0 auto;
   }
 
@@ -975,10 +973,10 @@ input[type=email] {
   }
 
   .two {
-    background-image: none;
-    height: 427px;
     width: 100%;
-    padding-top: 100px;
+    height: 669px;
+    padding: 100px 0 142px 0;
+    background-image: none;
   }
 
   .two .container {
@@ -1010,16 +1008,29 @@ input[type=email] {
     height: 427px;
   }
 
+  .three {
+    width: 100%;
+  }
+
+  .animals_container {
+    max-width: 100%;
+    gap: 29px;
+  }
+
   .pagination {
     top: 0;
     width: 295px;
     height: 92px;
     align-items: center;
   }
-  
+
+  .animal_card {
+    width: 294px;
+    height: 354px;
+  }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 640px) and (max-width: 999px) {
   .container {
     max-width: 600px;
     margin: 0 auto;
@@ -1053,18 +1064,19 @@ input[type=email] {
   }
 
   .button__one {
-    left: 20px;
+    position: relative;
+    left: 0px;
     top: 245px;
   }
 
   .two {
+    width: 100%;
+    height: 471px;
+    padding-top: 60px;
     background-image: url(../../assets/images/bg-images/back-1-flower.png);
     background-repeat: no-repeat;
     background-size: 231px 476px;
     background-position: top 5px right -104px;
-    height: 476px;
-    width: 100%;
-    padding-top: 60px;
   }
 
   .two .container {
@@ -1084,8 +1096,24 @@ input[type=email] {
     justify-content: space-between;
     flex-direction: column;
     align-content: center;
-    width: 495px;
+    margin-right: 125px;
     height: 367px;
+  }
+
+  .three {
+    width: 100%;
+    margin-top: 36px;
+    background-size: 385px 202px, 175px 131px;
+    background-position: left -192px bottom 0, right 0 bottom 0;
+  }
+
+  .three .container {
+    margin: 0 auto;
+  }
+
+  .animals_container {
+    max-width: 100%;
+    gap: 30px;
   }
 
   .pagination {
@@ -1094,9 +1122,67 @@ input[type=email] {
     height: 92px;
     align-items: center;
   }
+
+  .animal_card {
+    width: 285px;
+    height: 332px;
+  }
+
+  .animal_card .animal_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 60px;
+    margin: 8px 16px 0px;
+    padding: 0px;
+  }
+  
+  .animal_info__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 46.76px;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .animal_card h4 {
+    font-size: 12.47px;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .animal_card p {
+    font-size: 11.69px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .feed_icon.weed_eater {
+    background-size: cover;
+    width: 25.72px;
+    height: 28.84px;
+    margin: 8px 9px 10px 0;
+  }
+
+  .feed_icon.flesh_eater {
+    background-size: cover;
+    width: 37.41px;
+    height: 29.62px;
+    margin: 6px 6px 11px 0;
+  }
+
+  .card_3 {
+    display: none;
+  }
+
+  .card_6 {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 0px) and (max-width: 639px) {
   .container {
     max-width: 300px;
     margin: 0 auto;
@@ -1118,7 +1204,7 @@ input[type=email] {
     left: calc(50% + 3px);
     width: 119.09px;
     height: 119.09px;
-    z-index: -2;
+    /* z-index: -2; */
   }
 
   .one__text {
@@ -1132,18 +1218,21 @@ input[type=email] {
   }
 
   .button__one {
-    left: 9px;
+    position: relative;
+    margin: 0 auto;
+    left: 0px;
     top: 207px;
   }
 
   .two {
-    height: 454px;
     width: 100%;
+    height: 388px;
+    margin-top: 104px;
+    padding: 0;
     background-image: url(../../assets/images/bg-images/back-1-flower.png);
     background-repeat: no-repeat;
     background-position: top 38px right -70px;
     background-size: 105px 217px;
-    padding-top: 104px;
   }
 
   .two .container {
@@ -1181,7 +1270,81 @@ input[type=email] {
     line-height: 130%;
   }
 
+  .three {
+    width: 100%;
+    height: 1562px;
+    margin-top: 40px;
+    background-size: 138px 72px, 85px 71px;
+    background-position: left -80px bottom 0, right -17px bottom 0;
+  }
+
+  .three .container {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .animals_container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .animals_second {
+    margin-top: 20px;
+  }
+
   .pagination {
     display: none !important;
+  }
+
+  .animal_card {
+    width: 285px;
+    height: 332px;
+  }
+
+  .animal_card .animal_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 60px;
+    margin: 8px 16px 0px;
+    padding: 0px;
+  }
+  
+  .animal_info__container {
+    height: 46.76px;
+  }
+  
+  .animal_card h4 {
+    font-size: 12.47px;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .animal_card p {
+    font-size: 11.69px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .feed_icon.weed_eater {
+    background-size: cover;
+    width: 25.72px;
+    height: 28.84px;
+    margin: 8px 9px 10px 0;
+  }
+
+  .feed_icon.flesh_eater {
+    background-size: cover;
+    width: 37.41px;
+    height: 29.62px;
+    margin: 6px 6px 11px 0;
+  }
+
+  .card_5 {
+    display: none;
+  }
+
+  .card_6 {
+    display: none;
   }
 }
