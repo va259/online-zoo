@@ -16,6 +16,10 @@
   --frosted_glass_white: rgba(253, 253, 255, 0.52);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Roboto, sans-serif;
 }
@@ -1463,9 +1467,10 @@ footer h4 {
     right: 0;
     top: 0;
     width: 26px;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
+  }
+
+  footer .social span {
+    display: none;
   }
 
   .social a {
