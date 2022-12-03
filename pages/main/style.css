@@ -16,6 +16,10 @@
   --frosted_glass_white: rgba(253, 253, 255, 0.52);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Roboto, sans-serif;
 }
@@ -953,7 +957,7 @@ footer h4 {
   }
 }
 
-@media screen and (min-width: 1000px) and (max-device-width: 1599px){
+@media screen and (min-width: 1000px) and (max-device-width: 1599px) {
   .container {
     max-width: 940px;
     margin: 0 auto;
@@ -1463,9 +1467,10 @@ footer h4 {
     right: 0;
     top: 0;
     width: 26px;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
+  }
+
+  footer .social span {
+    display: none;
   }
 
   .social a {
@@ -1882,8 +1887,9 @@ footer h4 {
     margin: 0;
   }
   
-  footer .signature{
+  footer .signature {
     float: right;
     margin: 0;
     margin-bottom: 52px;
   }
+}
