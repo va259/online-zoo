@@ -114,33 +114,15 @@ nav {
 
 header nav ul {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   list-style-type: none;
   margin: 0px;
   padding: 0px;
+  width: 630px;
   overflow: hidden;
   flex-wrap: nowrap;
   z-index: 1;
-}
-
-header nav li:not(:first-child):not(:last-child) a {
-  padding: 29px;
-}
-
-header nav li:first-child {
-  display: flex;
-  justify-content: flex-start;
-  padding: 29px 29px 29px 0px;
-}
-
-header nav li:last-child{
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-header nav li:last-child a {
-  padding: 29px 0px 29px 29px;
 }
 
 header nav a {
@@ -162,15 +144,18 @@ header .logo {
   box-sizing: border-box;
   text-align: center;
   padding: 2.55px 4.75px;
-  margin-right: 63px;
+  margin-right: 5px;
   background-image: url(../../assets/images/bg-images/logo-stick.png);
   background-repeat: no-repeat;
   background-position: bottom 9.54px left 9.69px;
 }
 
+header li:first-child {
+  margin-left: 0;
+}
+
 header li a:hover:not(.noHover) {
   color: #F9804B;
-  /* background-color: #333; */
 }
 
 header li a:active {
@@ -233,7 +218,7 @@ header a.active {
 }
 
 .container_bg {
-  /* padding: 40px 92px 62px 92px; */
+  padding: 40px 0 62px 0;
   text-align: center;
 }
 
@@ -695,6 +680,10 @@ footer h4 {
     margin: 0 auto;
   }
 
+  header nav ul {
+    width: 580px;
+  }
+
   .hero {
     height: 390px; 
     width: 100%;
@@ -888,7 +877,7 @@ footer h4 {
     display: flex;
     width: 532px;
     height: 246px;
-    margin: 10px auto;
+    margin: 50px auto 41px auto;
   }
 
   .animals_widget p:first-of-type {
