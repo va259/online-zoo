@@ -488,8 +488,6 @@ header a.active {
 .four .container {
   position: relative;
   box-sizing: border-box;
-  max-width: 1160px;
-  margin: 0 auto;
   padding: 41px 60px 59px 100px;
   border-radius: 20px;
   background: var(--frosted_glass_white);
@@ -542,13 +540,14 @@ header a.active {
   z-index: -10 !important;
 }
 
-.how_it_works .arrow_container {
-  background-image: url(../../assets/images/vector/how-it-works-arr.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 130px;
-  height: 168px;
-  z-index: 10 !important;
+.how_it_works .arrow_black {
+  width: 69px;
+  height: 35px;
+  margin-top: 62px;
+}
+
+.how_it_works .arrow_green {
+  display: none;
 }
 
 .how_it_works .card {
@@ -565,7 +564,7 @@ header a.active {
   font-size: 16px;
   line-height: 140%;
   padding: 0;
-  margin: 0;
+  margin-top: 30px;
   color: #333B41;
   text-align: left;
 }
@@ -1323,7 +1322,7 @@ footer h4 {
   .four .container {
     position: relative;
     box-sizing: border-box;
-    max-width: 100%;
+    max-width: 640px;
     padding: 10px 20px 60px 20px;
   }
   
@@ -1348,23 +1347,25 @@ footer h4 {
 
   .how_it_works {
     width: 588px;
-    height: 260px;
+    height: 244px;
   }
 
   .how_it_works .card_container {
     position: relative;
     padding-top: 16px;
-    z-index: -10!important;
+    /* z-index: -10!important; */
   }
   
-  .how_it_works .arrow_container {
-    position: relative;
-    background-image: url(../../assets/images/vector/how-it-works-arr-640.svg);
-    background-repeat: no-repeat;
-    background-position: top 0 right -11px;
-    width: 42px;
-    height: 244px;
-    z-index: 100!important;
+  .how_it_works .arrow_black {
+    display: none;
+  }
+
+  .how_it_works .arrow_green {
+    display: block;
+    width: 94px;
+    height: 30px;
+    margin: -3px -20px 0 -30px;
+    z-index: 100;
   }
   
   .how_it_works p {
@@ -1477,10 +1478,6 @@ footer h4 {
     width: 298px;
     height: 22px;
     margin: 0;
-  }
-  
-  footer .signature{
-    /* float: right; */
   }
 }
 
@@ -1698,7 +1695,7 @@ footer h4 {
   }
   
   .four .container {
-    max-width: 100%;
+    max-width: 300px;
     padding: 20px 0 40px 0;
   }
   
@@ -1731,13 +1728,17 @@ footer h4 {
     z-index: -10;
   }
   
-  .how_it_works .arrow_container {
-    /* background-image: url(../../assets/images/vector/how-it-works-arr-640.svg); */
-    /* background-repeat: no-repeat; */
-    /* background-position: top 0 right -11px; */
-    width: 42px;
-    height: 244px;
-    z-index: 10;
+  .how_it_works .arrow_black {
+    display: none;
+  }
+
+  .how_it_works .arrow_green {
+    display: block;
+    width: 94px;
+    height: 30px;
+    transform: rotate(90deg);
+    margin: -30px 0 0 145px !important;
+    z-index: 100;
   }
   
   .how_it_works p {
