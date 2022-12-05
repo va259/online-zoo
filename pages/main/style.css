@@ -97,6 +97,16 @@ nav {
   background-repeat: no-repeat;
 }
 
+.popup {
+  width: 300px;
+  height: 150px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid cornflowerblue;
+  color: cornflowerblue;
+  z-index: 222;
+}
+
 header nav ul {
   display: flex;
   justify-content: space-between;
@@ -1353,7 +1363,6 @@ footer h4 {
   .how_it_works .card_container {
     position: relative;
     padding-top: 16px;
-    /* z-index: -10!important; */
   }
   
   .how_it_works .arrow_black {
@@ -1738,7 +1747,7 @@ footer h4 {
     height: 30px;
     transform: rotate(90deg);
     margin: -30px 0 0 145px !important;
-    z-index: 100;
+    z-index: 5;
   }
   
   .how_it_works p {
