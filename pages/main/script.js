@@ -5,6 +5,7 @@ const one = document.querySelector('.one');
 const init = () => {
   const toggleNav = document.querySelector('.toggleNav');
   toggleNav.addEventListener('click', toggleHandler);
+  alert(`Hi there! Please check back at the latest you can. Sorry, I'm a bit behind with the tasks, but trying to do my best.`)
 }
 
 const toggleHandler = event => {
