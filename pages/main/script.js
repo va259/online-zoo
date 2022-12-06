@@ -1,18 +1,30 @@
+const body = document.querySelector('body');
 const header = document.querySelector('header');
 const main = document.querySelector('main');
-const one = document.querySelector('.one');
+const nav = document.querySelector('nav');
+const toggleNav = document.querySelector('.toggleNav');
 
 const init = () => {
-  const toggleNav = document.querySelector('.toggleNav');
   toggleNav.addEventListener('click', toggleHandler);
-  alert(`Hi there! Please check back at the latest you can. Sorry, I'm a bit behind with the tasks, but trying to do my best.`)
+  alert(`Hi there! Please check back at the latest you can. Sorry, I'm a bit behind with the tasks, but doing my best. Thank you!`)
 }
 
 const toggleHandler = event => {
-  console.log('event.target: ', event.target)
-  const popup = one.appendChild(document.createElement('div'));
-  popup.textContent = 'This is going to be a modal window';
-  popup.classList.add('popup');
+  nav.firstElementChild.classList.toggle('toggled');
+  const menuElements = Array.from(nav.firstElementChild.children);
+  menuElements.reduce((acc, el) => {
+    el.classList.toggle('toggled_item');
+  }, 1);
+
+  toggleNav.classList.toggle('toggle_nav__toggled');
+  body.classList.toggle('dimmed');
+
+  const overlay = document.querySelector('.dimmed');
+  if (overlay) overlay.addEventListener('click', brightenHandler);
+}
+
+const brightenHandler = event => {
+  if (event.target.classList.contains('dimmed')) toggleHandler();
 }
 
 document.addEventListener('DOMContentLoaded', init);
