@@ -108,6 +108,7 @@ nav {
   background-repeat: no-repeat;
   width: 14px;
   height: 14px;
+  margin-right: 10px;
   background-color: #fff;
 }
 
@@ -380,14 +381,52 @@ header a.active {
   grid-row-gap: 40px;
 } */
 
-.animals_container {
+.carousel__inner {
+  overflow: hidden;
+  width: 1160px;
+  height: 876px;
+}
+
+.carousel__slide {
   position: relative;
+  top: 0;
+  left: 0;
   max-width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 28px;
   row-gap: 20px;
+}
+
+.slide__left {
+  left: -100%
+}
+
+.slide__middle {
+  left: 0;
+  top: 0;
+}
+
+.slide__right {
+  left: 100%
+}
+
+.move_left {
+  animation: animation_left 0.5s;
+}
+
+.move_right {
+  animation: animation_right 0.5s;
+}
+
+@keyframes animation_left {
+  from { left: -100%; }
+  to { left: 0; }
+}
+@keyframes animation_right {
+  from { left: -100%; }
+  to { left: -200%; }
 }
 
 .pagination {
@@ -411,6 +450,7 @@ header a.active {
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: color;
+  z-index: 2;
 }
 
 .arrow__right {
@@ -1102,7 +1142,12 @@ footer h4 {
     background-position: left -192px bottom 0, right 0 bottom -4px;
   }
 
-  .animals_container {
+  .carousel__inner {
+    width: 941px;
+    height: 800px;
+  }
+
+  .carousel__slide {
     max-width: 100%;
     gap: 26px;
     row-gap: 92px;
@@ -1323,7 +1368,12 @@ footer h4 {
     margin: 0 auto;
   }
 
-  .animals_container {
+  .carousel__inner {
+    width: 601px;
+    height: 760px;
+  }
+
+  .carousel__slide {
     max-width: 100%;
     gap: 26px;
     row-gap: 92px;
@@ -1713,8 +1763,13 @@ footer h4 {
     display: block;
     margin: 0 auto;
   }
+
+  .carousel__inner {
+    width: 287px;
+    height: 1396px;
+  }
   
-  .animals_container {
+  .carousel__slide {
     flex-direction: column;
     gap: 20px;
   }
