@@ -764,6 +764,7 @@ header a.active {
   position: absolute;
   display: flex;
   gap: 30px;
+  transition: all 0.5s ease;
 }
 
 .testimonials .card {
@@ -857,7 +858,7 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background: #FE9013;
   margin: 1px;
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 115px;
   height: 6px;
   border-radius: 5px;
