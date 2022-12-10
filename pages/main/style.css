@@ -108,6 +108,7 @@ nav {
   background-repeat: no-repeat;
   width: 14px;
   height: 14px;
+  margin-right: 10px;
   background-color: #fff;
 }
 
@@ -355,7 +356,7 @@ header a.active {
 /* section 3 */
 
 .three {
-  position: relative;
+  /* position: relative; */
   box-sizing: border-box;
   padding: 106px 0 100px 0;
   background-image: url(../../assets/images/bg-images/back-2-palm.png),
@@ -370,25 +371,90 @@ header a.active {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background: #fff;
+  z-index: 3;
   /* margin: 106px auto ; */
 }
-  
-.animals_container {
+
+.carousel {
   position: relative;
-  max-width: 100%px;
+  width: 100%;
+  height: 876px;
+  transition: all 0.5s ease;
+}
+
+.carousel__inner {
+  display: block;
+  position: relative;
+  overflow: hidden !important;
+  /* flex-direction: row; */
+  overflow: hidden;
+  width: 1160px;
+  height: 876px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  width: 1160px;
+  min-width: 1160px;
+  height: 100%;
+  margin: 0;
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 28px;
+  row-gap: 20px;
+  z-index: 0;
 }
+
+.slide__left {
+  top: 0;
+  left: -100%;
+  background-color: blueviolet;
+}
+
+.slide__middle {
+  left: 0;
+  top: 0;
+  background-color: red;
+}
+
+.slide__right {
+  top: 0;
+  left: 100%;
+  background-color: greenyellow;
+}
+
+/* .move_left {
+  animation: animation_left 0.5s;
+}
+
+.move_right {
+  animation: animation_right 0.5s;
+}
+
+@keyframes animation_left {
+  from { left: -100%; }
+  to { left: 0; }
+}
+@keyframes animation_right {
+  from { left: 100%; }
+  to { left: 0; }
+} */
 
 .pagination {
   position: relative;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  top: -23px;
+  top: 407px;
   width: 1322px;
-  height: 20px;
-  /* align-items: baseline; */
+  height: 0px;
+  z-index: 200;
+  background: #fff;
 }
 
 .circle_arrow {
@@ -402,6 +468,7 @@ header a.active {
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: color;
+  z-index: 2;
 }
 
 .arrow__right {
@@ -1090,18 +1157,28 @@ footer h4 {
     width: 100%;
     padding: 42px 0 140px 0;
     background-size: 386px 202px, 241px 180px;
-  background-position: left -192px bottom 0, right 0 bottom -4px;
+    background-position: left -192px bottom 0, right 0 bottom -4px;
   }
 
-  .animals_container {
+  .carousel {
+    width: 100%;
+    height: 800px;
+  }
+
+  .carousel__inner {
+    width: 941px;
+    height: 804px;
+  }
+
+  .carousel__slide {
     max-width: 100%;
-    gap: 29px;
+    gap: 26px;
+    row-gap: 92px;
   }
 
   .pagination {
-    top: 0;
+    top: 402px;
     width: 295px;
-    height: 92px;
     align-items: center;
   }
 
@@ -1314,15 +1391,27 @@ footer h4 {
     margin: 0 auto;
   }
 
-  .animals_container {
-    max-width: 100%;
-    gap: 30px;
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 760px;
+  }
+
+  .carousel__inner {
+    width: 601px;
+    height: 760px;
+  }
+
+  .carousel__slide {
+    width: 601px;
+    min-width: 601px;
+    gap: 26px;
+    row-gap: 92px;
   }
 
   .pagination {
-    top: 0;
+    top: 381px;
     width: 154px;
-    height: 92px;
     align-items: center;
   }
 
@@ -1704,10 +1793,22 @@ footer h4 {
     display: block;
     margin: 0 auto;
   }
+
+  .carousel {
+    width: 287px;
+    height: 1396px;
+  }
+
+  .carousel__inner {
+    width: 287px;
+    height: 1396px;
+  }
   
-  .animals_container {
+  .carousel__slide {
     flex-direction: column;
     gap: 20px;
+    width: 287px;
+    min-width: 1396px;
   }
 
   .animals_second {
