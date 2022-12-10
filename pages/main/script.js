@@ -1,13 +1,12 @@
-import { toggleHandler } from './toggle-nav.mjs';
-import { petsCarouselInit } from './pets-carousel.mjs';
-import { testimonialsCarouselInit } from './testimonials-carousel.mjs';
-import { popoverHandler } from './testimonials-popover.mjs';
+import { toggleHandler } from '../../assets/scripts/toggle-nav.mjs';
+import { petsCarouselInit } from '../../assets/scripts/pets-carousel.mjs';
+import { testimonialsCarouselInit } from '../../assets/scripts/testimonials-carousel.mjs';
+import { popoverHandler } from '../../assets/scripts/testimonials-popover.mjs';
 
 const toggleNav = document.querySelector('.toggleNav');
 const testimonials = document.querySelector('.testimonials');
 
 const init = () => {
-  alert(`Hi there! Please check back at the latest you can. Sorry, I'm a bit behind with the tasks, but trying to do my best. Thank you!`)
   toggleNav.addEventListener('click', toggleHandler);
   if (window.innerWidth < 1000) testimonials.addEventListener('click', popoverHandler);
   petsCarouselInit();
