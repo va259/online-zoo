@@ -427,23 +427,6 @@ header a.active {
   background-color: greenyellow;
 }
 
-/* .move_left {
-  animation: animation_left 0.5s;
-}
-
-.move_right {
-  animation: animation_right 0.5s;
-}
-
-@keyframes animation_left {
-  from { left: -100%; }
-  to { left: 0; }
-}
-@keyframes animation_right {
-  from { left: 100%; }
-  to { left: 0; }
-} */
-
 .pagination {
   position: relative;
   box-sizing: border-box;
@@ -730,6 +713,7 @@ header a.active {
 }
 
 .five {
+  position: relative;
   background: #fff;
   background-image: url(../../assets/images/bg-images/back-4-leaf.png);
   background-size: 409px 407px;
@@ -1239,10 +1223,6 @@ footer h4 {
     gap: 30px;
   }
 
-  .testimonials .card:last-child {
-    display: none;
-  }
-
   .testimonials .card {
     width: 293px;
     height: 391px;
@@ -1557,6 +1537,7 @@ footer h4 {
   }
 
   .five {
+    position: relative;
     background-size: 204px 203px;
     background-position: right -88px bottom -69px;
     padding: 60px 0 80px 0;
@@ -1583,13 +1564,46 @@ footer h4 {
     gap: 15px;
   }
 
-  .testimonials .card:last-child {
-    display: none;
-  }
-
   .testimonials .card {
     width: 600px;
     height: 109px;
+  }
+
+  .popover {
+    position: fixed;
+    display: block;
+    width: 268px;
+    top: 30vh;
+    left: calc(50% - 134px);
+    padding: 0;
+    background: #F1F3F2;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(var(--gray_light), var(--gray_light)), var(--pink_gradient);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    z-index: 4;
+  }
+  
+  .popover .close {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: -8px;
+    right: -20px;
+    background-image: url(./../../assets/images/incons/x_icon_orange.svg);
+    z-index: 5;
+  }
+
+  .popover .card_inner {
+    /* padding: 0 14px 19px 16px; */
+  }
+
+  .popover p {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #767474;
   }
 
   .card_inner {
@@ -1986,13 +2000,41 @@ footer h4 {
     gap: 15px;
   }
 
-  .testimonials .card:last-child {
-    display: none;
-  }
-
   .testimonials .card {
     width: 300px;
     height: 109px;
+  }
+
+  .popover {
+    position: fixed;
+    display: flex;
+    width: 268px;
+    top: 30vh;
+    left: calc(50% - 134px);
+    background: #F1F3F2;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(var(--gray_light), var(--gray_light)), var(--pink_gradient);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    z-index: 4;
+  }
+
+  .popover .close {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: -8px;
+    right: -20px;
+    background-image: url(./../../assets/images/incons/x_icon_orange.svg);
+    z-index: 5;
+  }
+
+  .popover p {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #767474;
   }
 
   .card_inner {
