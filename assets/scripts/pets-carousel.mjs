@@ -11,7 +11,7 @@ let carouselCurrentPosition = 0;
 const petCards = [  'card_1', 'card_2', 'card_3',
                     'card_4', 'card_5', 'card_6' ]
 
-export const carouselInit = () => {
+export const petsCarouselInit = () => {
   emptySlide = initialSlide.cloneNode(true);
   loadPetCards(Array.from(initialSlide.children));
   carouselPagination.addEventListener('click', carouselHandler);
