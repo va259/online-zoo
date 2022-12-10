@@ -6,7 +6,7 @@ export const toggleHandler = event => {
   nav.firstElementChild.classList.toggle('toggled');
   const menuElements = Array.from(nav.firstElementChild.children);
 
-  menuElements.reduce((ac, el) => {
+  menuElements.reduce((_, el) => {
     el.classList.toggle('toggled_item');
   }, 1);
 
