@@ -1,27 +1,18 @@
 const carouselPagination = document.querySelector('.pagination');
 const carouselArrowLeft = document.querySelector('.arrow__left');
 const carouselArrowRight = document.querySelector('.arrow__right');
-const carouselInner = document.querySelector('.carousel__inner');
+const carouselInner = document.querySelector('.carousel');
 const initialSlide = document.querySelector('.carousel__slide');
-console.log('initialSlid:', initialSlide);
-const slideLeft = document.querySelector('.slide__left');
-const slideRight = document.querySelector('.slide__right');
 
-const slide = document.querySelector('.carousel__slide');
-const slideElements = document.querySelector('.carousel__slide').children;
-console.log(slideElements);
-const cardNodes = document.querySelectorAll('animal_card');
+const carouselInnerWidth = initialSlide.offsetWidth;
+let emptySlide = {};
+let carouselCurrentPosition = 0;
 
 const petCards = [  'card_1', 'card_2', 'card_3',
                     'card_4', 'card_5', 'card_6' ]
 
-const carouselInnerWidth = carouselInner.offsetWidth;
-let carouselCurrentPosition = 0;
-let emptySlide = {};
-
 export const carouselInit = () => {
   emptySlide = initialSlide.cloneNode(true);
-  console.log('emptySlide:', emptySlide);
   loadPetCards(Array.from(initialSlide.children));
   carouselPagination.addEventListener('click', carouselHandler);
 }
@@ -34,13 +25,16 @@ const shuffle = array => {
   })
 }
 
+const delay = time => {
+  return new Promise(resolve => setTimeout(resolve, time));
+}
+
 const generateNextSlide = () => {
   const nextSlide = emptySlide.cloneNode(true);
-  // nextSlide.classList.add(`slide__${slideNumber}`)
-  // console.log('nextSlide:', nextSlide);
   const slideCards = Array.from(nextSlide.children);
   const shuffled = shuffle(petCards);
   slideCards.reduce((_, el, i) => el.classList.add(shuffled[i]), 0);
+  nextSlide.style.left = `${-1 * carouselCurrentPosition}px`;
   return nextSlide;
 }
 
@@ -52,20 +46,27 @@ const carouselHandler = event => {
   if (!targetArrowRight === carouselArrowRight) return;
 
   if (targetArrowLeft) {
-    // initialSlide.classList.add('.move_left');
-    // carouselInner.after(generateNextSlide());
     carouselCurrentPosition += carouselInnerWidth;
     carouselInner.style.transform = `translateX(${carouselCurrentPosition}px)`;
-    carouselCurrentPosition -= carouselInnerWidth;
-    slideRight.classList.remove('slide__right');
+    carouselInner.prepend(generateNextSlide());
+    toggleVisibilityArrows();
+    delay(500).then(() => carouselInner.lastElementChild.remove());
   } else if (targetArrowRight) {
-    // initialSlide.classList.add('.move_right');
-    // carouselInner.insertBefore(generateNextSlide(), slide);
     carouselCurrentPosition -= carouselInnerWidth;
     carouselInner.style.transform = `translateX(${carouselCurrentPosition}px)`;
-    carouselCurrentPosition += carouselInnerWidth;
-    slideLeft.classList.remove('slide__left');
+    carouselInner.append(generateNextSlide());
+    toggleVisibilityArrows();
+    delay(500).then(() => carouselInner.firstElementChild.remove());
   };
+}
+
+const toggleVisibilityArrows = () => {
+  carouselArrowLeft.style.display = 'none';
+  carouselArrowRight.style.display = 'none';
+  delay(500).then(() => {
+    carouselArrowLeft.style.display = '';
+    carouselArrowRight.style.display = '';
+  });
 }
 
 const loadPetCards = cards => {

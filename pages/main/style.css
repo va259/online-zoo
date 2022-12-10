@@ -371,48 +371,64 @@ header a.active {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background: #fff;
+  z-index: 3;
   /* margin: 106px auto ; */
 }
 
-/* .animals_grid {
-  display: grid;
+.carousel {
+  position: relative;
   width: 100%;
-  grid-template-columns: repeat(3, 370px);
-  grid-row-gap: 40px;
-} */
+  height: 876px;
+  transition: all 0.5s ease;
+}
 
 .carousel__inner {
+  display: block;
+  position: relative;
+  overflow: hidden !important;
+  /* flex-direction: row; */
   overflow: hidden;
   width: 1160px;
   height: 876px;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
 .carousel__slide {
-  position: relative;
+  position: absolute;
   top: 0;
-  left: 0;
-  max-width: 100%;
+  width: 1160px;
+  min-width: 1160px;
+  height: 100%;
+  margin: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 28px;
   row-gap: 20px;
+  z-index: 0;
 }
 
 .slide__left {
-  left: -100%
+  top: 0;
+  left: -100%;
+  background-color: blueviolet;
 }
 
 .slide__middle {
   left: 0;
   top: 0;
+  background-color: red;
 }
 
 .slide__right {
-  left: 100%
+  top: 0;
+  left: 100%;
+  background-color: greenyellow;
 }
 
-.move_left {
+/* .move_left {
   animation: animation_left 0.5s;
 }
 
@@ -425,9 +441,9 @@ header a.active {
   to { left: 0; }
 }
 @keyframes animation_right {
-  from { left: -100%; }
-  to { left: -200%; }
-}
+  from { left: 100%; }
+  to { left: 0; }
+} */
 
 .pagination {
   position: relative;
@@ -437,6 +453,8 @@ header a.active {
   top: 407px;
   width: 1322px;
   height: 0px;
+  z-index: 200;
+  background: #fff;
 }
 
 .circle_arrow {
