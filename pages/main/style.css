@@ -388,7 +388,6 @@ header a.active {
   position: relative;
   overflow: hidden !important;
   /* flex-direction: row; */
-  overflow: hidden;
   width: 1160px;
   height: 876px;
   margin: 0 auto;
@@ -753,11 +752,18 @@ header a.active {
 }
 
 .testimonials {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1160px;
+  display: block;
+  position: relative;
+  overflow: hidden !important;
+  width: 1161px;
   height: 391px;
   margin-top: 47px;
+}
+
+.testimonials__inner {
+  position: absolute;
+  display: flex;
+  gap: 30px;
 }
 
 .testimonials .card {
@@ -831,32 +837,39 @@ header a.active {
 }
 
 .scroll {
+  width: 599px;
+  margin: 0 auto;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
   box-sizing: content-box;
   height: 8px;
-  width: 599px;
-  margin: 21px auto 0 auto;
+  width: 100%;
+  margin-top: 21px;
+  border: 1px solid transparent;
   border-radius: 5px;
   background-image: linear-gradient(var(--gray_light), var(--gray_light)), var(--pink_gradient);
-  border: 1px solid transparent;
   background-clip: content-box, border-box;
 }
 
-.scroll > span {
-  display: block;
-  position: relative;
-  height: 6px;
-  border-radius: 5px;
-  background-color: #FE9013;
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #FE9013;
   margin: 1px;
   overflow: hidden;
+  width: 115px;
+  height: 6px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.scroll > span:hover {
+input[type="range"]::-webkit-slider-thumb:hover {
   background-color: #E47209;
   cursor: pointer;
 }
 
-.scroll > span:active {
+input[type="range"]::-webkit-slider-thumb:active {
   background-color: #4B9200;
 }
 
@@ -1214,12 +1227,15 @@ footer h4 {
   }
 
   .testimonials {
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 100%;
+    width: 940px;
     height: 391px;
-    gap: 15px;
     margin-top: 30px;
+  }
+
+  .testimonials__inner {
+    position: absolute;
+    display: flex;
+    gap: 30px;
   }
 
   .testimonials .card:last-child {
@@ -1248,7 +1264,7 @@ footer h4 {
 
   .scroll {
     width: 390px;
-    margin: 20px auto 0 auto;
+    margin-top: 20px;
   }
 
   .five .button {
@@ -1556,8 +1572,14 @@ footer h4 {
     justify-content: space-between;
     max-width: 100%;
     height: 357px;
-    gap: 15px;
     margin-top: 30px;
+  }
+
+  .testimonials__inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .testimonials .card:last-child {
@@ -1951,12 +1973,16 @@ footer h4 {
   }
 
   .testimonials {
-    flex-direction: column;
-    justify-content: space-between;
     max-width: 300px;
     height: 357px;
-    gap: 15px;
     margin-top: 20px;
+  }
+
+  .testimonials__inner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .testimonials .card:last-child {
