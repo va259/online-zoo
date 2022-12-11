@@ -1,4 +1,3 @@
-const form = document.querySelector('.donation_amount form');
 const amountRadios = document.querySelectorAll('input[type="radio"]');
 const anotherAmount = document.querySelector('input[type="number"]');
 
@@ -15,7 +14,6 @@ const numberInputHandler = event => {
       if (+radio.value === +value) radio.checked = true;
     }, 0)
   }
-  donateAmountInit();
 }
 
 export const donateAmountInit = () => {
