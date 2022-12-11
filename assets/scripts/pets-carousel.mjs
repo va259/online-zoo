@@ -51,6 +51,10 @@ const generateNextSlide = cards => {
   return nextSlide;
 }
 
+const removePreviousSlide = el => {
+  delay(500).then(() => el.remove());
+}
+
 const carouselHandler = event => {
   const targetArrowLeft = event.target.closest('.arrow__left');
   const targetArrowRight = event.target.closest('.arrow__right');
@@ -62,18 +66,18 @@ const carouselHandler = event => {
     carouselCurrentPosition += carouselInnerWidth;
     carouselInner.style.transform = `translateX(${carouselCurrentPosition}px)`;
     carouselInner.prepend(generateNextSlide(petCardsList));
-    toggleVisibilityArrows();
-    delay(500).then(() => carouselInner.lastElementChild.remove());
+    toggleAbilityArrows();
+    removePreviousSlide(carouselInner.lastElementChild);
   } else if (targetArrowRight) {
     carouselCurrentPosition -= carouselInnerWidth;
     carouselInner.style.transform = `translateX(${carouselCurrentPosition}px)`;
     carouselInner.append(generateNextSlide(petCardsList));
-    toggleVisibilityArrows();
-    delay(500).then(() => carouselInner.firstElementChild.remove());
+    toggleAbilityArrows();
+    removePreviousSlide(carouselInner.firstElementChild);
   };
 }
 
-const toggleVisibilityArrows = () => {
+const toggleAbilityArrows = () => {
   carouselPagination.removeEventListener('click', carouselHandler);
   delay(500).then(() => {
     carouselPagination.addEventListener('click', carouselHandler);

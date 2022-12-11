@@ -1,5 +1,3 @@
-import { petsList } from "../data/pets-list.mjs";
-
 const carouselPagination = document.querySelector('.pagination');
 const carouselArrowLeft = document.querySelector('.arrow__left');
 const carouselArrowRight = document.querySelector('.arrow__right');
@@ -17,22 +15,6 @@ export const petsCarouselInit = () => {
   emptySlide = initialSlide.cloneNode(true);
   loadPetCards(Array.from(initialSlide.children));
   carouselPagination.addEventListener('click', carouselHandler);
-}
-
-const renderCards = (cardsList) => {
-  cardsList.reduce((_, card) => {
-    parentEl.innerHTML += `
-      <div class="animal_card ${card.img}">
-        <div class="animal_info__container">
-          <div class="animal_info">
-              <h4>${card.name}</h4>
-              <p>${card.origin}</p>
-          </div>
-          <div class="feed_icon ${card.feed}"></div>
-        </div>
-      </div>
-    `
-  }, 0)
 }
 
 const shuffle = array => {
