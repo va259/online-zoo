@@ -15,7 +15,6 @@ const numberInputHandler = event => {
       if (+radio.value === +value) radio.checked = true;
     }, 0)
   }
-  donateAmountInit();
 }
 
 export const donateAmountInit = () => {

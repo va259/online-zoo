@@ -4,7 +4,7 @@ const toggleNav = document.querySelector('.toggleNav');
 
 export const toggleHandler = event => {
   nav.firstElementChild.classList.toggle('toggled');
-  const menuElements = Array.from(nav.firstElementChild.children);
+  const menuElements = [...nav.firstElementChild.children];
 
   menuElements.reduce((_, el) => {
     el.classList.toggle('toggled_item');

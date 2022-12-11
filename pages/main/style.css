@@ -152,16 +152,6 @@ nav {
   z-index: 3;
 }
 
-.popup {
-  width: 300px;
-  height: 150px;
-  margin: 0 auto;
-  background: #fff;
-  border: 1px solid cornflowerblue;
-  color: cornflowerblue;
-  z-index: 222;
-}
-
 header nav ul {
   display: flex;
   justify-content: space-between;
