@@ -21,7 +21,7 @@ export const reviewsList = [
     "name":"Mila Riksha",
     "local":"Local Sweden • Yesterday",
     "review":"The best online zoo I've met. My son delighted very much likes to watch gourillazzz. Online zoo is one of the ways to instill a love for animals. Online zoo is one of the ways to instill a love for animals. The best online zoo I've met. My son delighted very much likes to watch gourillazzz. My son delighted very much likes to watch gourillazzz. Online zoo is one of the ways to instill a love for animals. The best online zoo I've met.<br><br>The best online zoo I've met. My son delighted very much likes to watch gourillazzz. Online zoo is one of the ways to instill a love for animals.",
-    "imgClass":"default_user"
+    "imgClass":"user_three"
   },
   {
     "name":"Hamza Martin",
@@ -45,7 +45,7 @@ export const reviewsList = [
     "name":"Alexis Oliver",
     "local":"Local USA • Last week",
     "review":"Online zoo is one of the ways to instill a love for animals. The best online zoo I've met. My son delighted very much likes to watch gourillazzz. My son delighted very much likes to watch gourillazzz. Online zoo is one of the ways to instill a love for animals. The best online zoo I've met. The best online zoo I've met.<br><br>My son delighted very much likes to watch gourillazzz. Online zoo is one of the ways to instill a love for animals. Online zoo is one of the ways to instill a love for animals. The best online zoo I've met. My son delighted very much likes to watch gourillazzz.",
-    "imgClass":"user_one"
+    "imgClass":"user_three"
   },
   {
     "name":"Hiba Bowman",

@@ -15,15 +15,15 @@ const addPopoverElement = card => {
 
   popover.innerHTML += `
     <div class="close"></div>
-    <div class="card_inner">
-    <div class="user">
-        <div class="${userPicClass}"></div>
-        <div class="user_info">
-            <div class="name">${userName}</div>
-            <div class="local">${userLocal}</div>
-        </div>
-    </div>
-    <p>${reviewBody}</p>
+    <div class="popover_inner">
+      <div class="popover_user">
+          <div class="${userPicClass}"></div>
+          <div class="user_info">
+              <div class="name">${userName}</div>
+              <div class="local">${userLocal}</div>
+          </div>
+      </div>
+      <p>${reviewBody}</p>
     </div>
   `
 }

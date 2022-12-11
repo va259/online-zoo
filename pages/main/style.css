@@ -788,19 +788,19 @@ header a.active {
   margin-right: 10px;
 }
 
-.card .user_icon.default_user {
+.default_user {
   background-image: url(../../assets/images/incons/user_icon_default.png);
 }
 
-.card .user_icon.user_one {
+.user_one {
   background-image: url(../../assets/images/incons/user_icon_1.png);
 }
 
-.card .user_icon.user_two {
+.user_two {
   background-image: url(../../assets/images/incons/user_icon_2.png);
 }
 
-.card .user_icon.user_three {
+.user_three {
   background-image: url(../../assets/images/incons/user_icon_3.png);
 }
 
@@ -1574,7 +1574,7 @@ footer h4 {
     background-clip: content-box, border-box;
     z-index: 4;
   }
-  
+
   .popover .close {
     position: absolute;
     width: 14px;
@@ -1585,8 +1585,29 @@ footer h4 {
     z-index: 5;
   }
 
-  .popover .card_inner {
-    /* padding: 0 14px 19px 16px; */
+  .popover_inner {
+    margin: 0 14px 19px 16px;
+  }
+
+  .popover_user {
+    display: flex;
+    height: 38px;
+    margin-top: 15px;
+  }
+
+  .popover .user_icon {
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 37px;
+    height: 37px;
+    margin-right: 10px;
+  }
+
+  .popover .local {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #BDBDBD;  
   }
 
   .popover p {
@@ -2020,6 +2041,31 @@ footer h4 {
     z-index: 5;
   }
 
+  .popover_inner {
+    margin: 0 14px 19px 16px;
+  }
+
+  .popover_user {
+    display: flex;
+    height: 38px;
+    margin-top: 15px;
+  }
+
+  .popover .user_icon {
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 37px;
+    height: 37px;
+    margin-right: 10px;
+  }
+
+  .popover .local {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #BDBDBD;  
+  }
+
   .popover p {
     font-weight: 300;
     font-size: 15px;
@@ -2058,7 +2104,6 @@ footer h4 {
   }
 
   footer .sub_upper {
-    /* height: 52px; */
     display: block;
   }
 
