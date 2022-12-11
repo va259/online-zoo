@@ -13,6 +13,8 @@ const numberInputHandler = event => {
     [...amountRadios].reduce((_, radio) => {
       if (+radio.value === +value) radio.checked = true;
     }, 0)
+  } else {
+    [...amountRadios].reduce((_, radio) => radio.checked = false, 0)
   }
 }
 
