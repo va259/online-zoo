@@ -1,4 +1,3 @@
-const form = document.querySelector('.donation_amount form');
 const amountRadios = document.querySelectorAll('input[type="radio"]');
 const anotherAmount = document.querySelector('input[type="number"]');
 
