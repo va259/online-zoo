@@ -5,7 +5,6 @@ import { popoverHandler } from '../../assets/scripts/testimonials-popover.mjs';
 
 const toggleNav = document.querySelector('.toggleNav');
 const testimonials = document.querySelector('.testimonials');
-alert("❗When we check conditions for different screen widths, we don't just stretch the screen to the desired width, but do a page reload!")
 
 const init = () => {
   toggleNav.addEventListener('click', toggleHandler);
